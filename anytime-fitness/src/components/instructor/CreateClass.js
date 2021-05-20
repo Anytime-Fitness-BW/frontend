@@ -1,8 +1,11 @@
+import axios from 'axios'
 import React from 'react'
 import { useState } from 'react'
+import { useHistory } from 'react-router'
 
 const CreateClass = () => {
   const [formValues, setFormValues] = useState("")
+  const { push } = useHistory()
 
   const changeHandler = (e) => {
     setFormValues({
@@ -13,6 +16,14 @@ const CreateClass = () => {
 
   const submitHandler = (e) => {
     e.preventDefault()
+    
+    axios
+      .post('', formValues)
+      .then(res=>{
+        console.log("create post RES",res)
+        push('/instructor/classes')
+      })
+      .catch(err=>{console.log("create post ERR", err)})
   }
 
   return (
