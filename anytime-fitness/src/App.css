@@ -7,6 +7,8 @@ body,
   padding: 0;
 }
 
+/* App.js Styling */
+
 .App {
   font-family: sans-serif;
   text-align: center;
@@ -45,9 +47,8 @@ nav {
   border-bottom: 1px solid #1c5d76;
 }
 
-.store-header {
-  color: #97290d;
-}
+
+/* Home page Styling */
 
 .home-wrapper {
   display: flex;
@@ -60,4 +61,24 @@ nav {
   min-width: 1032px;
   height: 43rem;
   border-radius: 2rem;
+}
+
+.buttons-and-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -10rem;
+}
+
+.clientButton {
+  margin: 1rem;
+  width: 10rem;
+  height: 2rem;
+}
+
+.instructorButton {
+  margin: 1rem;
+  width: 12rem;
+  height: 2rem;
 }

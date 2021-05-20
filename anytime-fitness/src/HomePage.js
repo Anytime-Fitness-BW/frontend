@@ -22,10 +22,12 @@ function HomePage() {
                     src='https://i.stack.imgur.com/y9DpT.jpg'
                     alt='place-holder.img'
                 />
-                <button onClick={routeToClientSignUp}>
+            </div>
+            <div className='buttons-and-link'>
+                <button className='clientButton' onClick={routeToClientSignUp}>
                     Create Client Account
                 </button>
-                <button onClick={routeToInstructorSignUp}>
+                <button className='instructorButton' onClick={routeToInstructorSignUp}>
                     Create Instructor Account
                 </button>
                 <Link to='/login'>or click here to sign in</Link>
