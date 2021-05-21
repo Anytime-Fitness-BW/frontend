@@ -81,3 +81,15 @@ nav {
   width: 12rem;
   height: 2rem;
 }
+
+/* Client Sign Up Form Styling */
+#signUpForm {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -0.2rem;
+  margin-left: 7rem;
+  margin-right: 7rem;
+  font-weight: 600;
+}
