@@ -2,7 +2,7 @@ import './App.css';
 import CreateClass from './components/instructor/CreateClass';
 import React, { useState, useEffect } from 'react'
 import {  Route, Link } from "react-router-dom";
-import HomePage from './HomePage'
+import HomePage from './components/HomePage'
 
 function App() {
   return (
@@ -11,7 +11,6 @@ function App() {
       <nav>
         <h1></h1>
           <div className='nav-links'>
-            <CreateClass/>
               <Link to='/login'>Sign in</Link>
           </div>
       </nav>
