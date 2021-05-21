@@ -11,6 +11,10 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 const store = createStore(reducer, applyMiddleware(thunk, logger))
 
+
+
+
+const rootElement = document.getElementById("root");
 ReactDOM.render(
   <Provider store={store}>
     <Router>
@@ -19,4 +23,6 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
+
+
 
