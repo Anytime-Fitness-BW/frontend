@@ -15,6 +15,12 @@ function HomePage() {
 
     return (
         <div>
+            <nav>
+                <h1></h1>
+                <div className='nav-links'>
+                    <Link to='/login'>Sign in</Link>
+                </div>
+            </nav>
             <h1>Anytime Fitness</h1>
             <div className='home-wrapper'>
                 <img

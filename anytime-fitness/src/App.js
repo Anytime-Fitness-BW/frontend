@@ -83,15 +83,6 @@ const submitForm = () => {
 
   return (
     <div className="App">
-     
-      <nav>
-        <h1></h1>
-          <div className='nav-links'>
-              <Link to='/login'>Sign in</Link>
-          </div>
-      </nav>
-
-
       <Route exact path='/'>
         <HomePage />
       </Route>
