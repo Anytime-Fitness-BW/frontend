@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import { useHistory } from 'react-router'
 
 const initialState = {
   className: '',
@@ -16,7 +17,8 @@ const initialState = {
 
 
 const AddClass = () => {
-  const [classes, setClasses] = useState(initialState)  
+  const [classes, setClasses] = useState(initialState)
+  const { push } = useHistory()
 
 
   // a list of classes to choose from
@@ -29,13 +31,14 @@ const AddClass = () => {
         console.log("AddClass get ERR", err)
       })
     
+  // adds the class    
     axios
       .post('', classes)
       .then(res=>{
-        console.log("AddClass get RES", res)
+        console.log("AddClass post RES", res)
       })
       .catch(err=>{
-        console.log("AddClass get ERR", err)
+        console.log("AddClass post ERR", err)
       })
     
       const changeHandler = (e) => {
@@ -45,9 +48,15 @@ const AddClass = () => {
         })
       }
 
+      const handleSubmit = e => {
+        e.preventDefault()
+        props.addClasses(classes)
+        
+      }
+
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>
           <input 
           type="text"
