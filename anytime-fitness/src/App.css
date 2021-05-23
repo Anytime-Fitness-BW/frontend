@@ -22,7 +22,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0 16px;
-  border-bottom: 1px solid #efefef;
   margin-bottom: 32px;
 }
 
@@ -81,4 +80,84 @@ nav {
   margin: 1rem;
   width: 12rem;
   height: 2rem;
+}
+
+/* Client Sign Up Form Styling */
+#signUpForm {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -0.2rem;
+  margin-left: 7rem;
+  margin-right: 7rem;
+  font-weight: 600;
+}
+
+.form-image {
+  height: 10rem;
+  width: 10rem;
+  margin-top: 2rem;
+  margin-bottom: -.7rem;
+}
+
+.hr {
+  width: 20rem;
+  margin-top: 1rem;
+  margin-bottom: -1rem;
+}
+
+.hr2 {
+  width: 20rem;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.first-four-text-inputs {
+  display: flex;
+  flex-flow: row wrap;
+  width: 25rem;
+  margin-left: 1rem;
+}
+
+.text-inputs {
+  width: 300px;
+  margin-left: -5.25rem;
+}
+
+.checkbox{
+  display: flex;
+  flex-direction: row;
+  margin-left: -2rem;
+  margin-top: -1rem;
+}
+
+.checkbox-square {
+  margin-top: .75rem;
+  margin-right: .5rem;
+}
+
+.checkbox-text {
+  font-size: .75rem;
+}
+
+.bottom-text {
+  display: flex;
+  flex-direction: row;
+  margin-left: -2rem;
+  margin-top: .5rem;
+  font-size: .7rem;
+}
+
+.bottom-text-link {
+  margin-top: .6rem;
+  margin-left: .4rem;
+  color: black;
 }
