@@ -1,7 +1,17 @@
-import react from "react"
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react'
 import "./InstructorSignUp.css"
-import {Route, BrowserRouter as Router} from "react-router-dom"
+import { useHistory, Link } from "react-router-dom";
+
+
+
+
+
+
+
+
+
+
+
 function InstructorSignUp() {
 
 
