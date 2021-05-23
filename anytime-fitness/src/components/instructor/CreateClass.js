@@ -3,8 +3,22 @@ import React from 'react'
 import { useState } from 'react'
 import { useHistory } from 'react-router'
 
-const CreateClass = () => {
-  const [formValues, setFormValues] = useState("")
+const initialState = {
+  className: '',
+  date: '',
+  time: '',
+  duration: '',
+  type: '',
+  location: '',
+  intensity: '',
+  price: '',
+  maxSize: '',
+  confirm: false,
+}
+
+
+const CreateClass = (props) => {
+  const [formValues, setFormValues] = useState(initialState)
   const { push } = useHistory()
 
   const changeHandler = (e) => {
@@ -17,10 +31,12 @@ const CreateClass = () => {
   const submitHandler = (e) => {
     e.preventDefault()
     
+    
     axios
       .post('', formValues)
       .then(res=>{
         console.log("create post RES",res)
+        props.addClasses(formValues)
         push('/instructor/classes')
       })
       .catch(err=>{console.log("create post ERR", err)})
@@ -100,6 +116,15 @@ const CreateClass = () => {
           value={formValues.price}
           onChange={changeHandler}
           placeholder="$ Price"
+          />
+        </label>
+        <label>
+          <input 
+          type="text"
+          name="maxSize"
+          value={formValues.maxSize}
+          onChange={changeHandler}
+          placeholder="Max Class Size"
           />
         </label>
         <label> 
