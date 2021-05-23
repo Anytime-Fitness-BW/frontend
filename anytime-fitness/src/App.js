@@ -1,4 +1,6 @@
 import './App.css';
+
+import InstructorSignUp from './InstructorSignUp';
 import React from 'react'
 import {  Route, Link } from "react-router-dom";
 import HomePage from './components/HomePage'
@@ -35,6 +37,7 @@ const initialClientsFormErrors = {
 
 
 function App() {
+
 
   // STATES //
   const [client, setClient] = useState([])                                               // array of order objects
@@ -111,6 +114,7 @@ useEffect(() => {
       <Route path='/dashboard'>
         {/* this leads to the client dashboard after the sign up process will change to the appropriate endpoint when provided with that information */}
       </Route>
+
     </div>
   );
 }
