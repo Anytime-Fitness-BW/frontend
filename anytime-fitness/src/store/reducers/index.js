@@ -1,10 +1,8 @@
 import { ADD_FAILURE, ADD_START, ADD_SUCCESS, FETCH_FAILURE, FETCH_START, FETCH_SUCCESS } from "../actions"
 
 const initialState = {
-    username: '',
-    password: '',
     classes: [],
-    loading: false,
+    addingClass: false,
     error: ''
 }
 

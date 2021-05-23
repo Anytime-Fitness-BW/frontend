@@ -1,6 +1,5 @@
 import './App.css';
-import CreateClass from './components/instructor/CreateClass';
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import {  Route, Link } from "react-router-dom";
 import HomePage from './components/HomePage'
 import axios from 'axios'
@@ -36,6 +35,7 @@ const initialClientsFormErrors = {
 
 
 function App() {
+
   // STATES //
   const [client, setClient] = useState([])                                               // array of order objects
   const [clientFormValues, setClientFormValues] = useState(initialClientFormValues)      // objects
@@ -85,9 +85,6 @@ const submitForm = () => {
 useEffect(() => {
   schema.isValid(clientFormValues).then((valid) => setDisabled(!valid));
 }, [clientFormValues])
-
-
-
 
 
 
