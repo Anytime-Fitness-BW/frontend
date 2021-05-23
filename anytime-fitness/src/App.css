@@ -119,3 +119,45 @@ nav {
   align-items: center;
   flex-direction: column;
 }
+
+.first-four-text-inputs {
+  display: flex;
+  flex-flow: row wrap;
+  width: 25rem;
+  margin-left: 1rem;
+}
+
+.text-inputs {
+  width: 300px;
+  margin-left: -5.25rem;
+}
+
+.checkbox{
+  display: flex;
+  flex-direction: row;
+  margin-left: -2rem;
+  margin-top: -1rem;
+}
+
+.checkbox-square {
+  margin-top: .75rem;
+  margin-right: .5rem;
+}
+
+.checkbox-text {
+  font-size: .75rem;
+}
+
+.bottom-text {
+  display: flex;
+  flex-direction: row;
+  margin-left: -2rem;
+  margin-top: .5rem;
+  font-size: .7rem;
+}
+
+.bottom-text-link {
+  margin-top: .6rem;
+  margin-left: .4rem;
+  color: black;
+}

@@ -6,6 +6,7 @@ import HomePage from './components/HomePage'
 import axios from 'axios'
 import * as yup from 'yup'
 import ClientSignUpForm from './components/createClientAccount/signUpForm'
+import { schema } from './components/createClientAccount/clientFormSchema'
 
 
 
@@ -57,10 +58,20 @@ function App() {
 
   // EVENT HELPERS //
   const inputChanges = (name, value) => {
-    setClientFormValues({
-      ...clientFormValues,
-      [name]: value
-    })
+    yup.reach(schema, name)
+       .validate(value)
+       .then(() => setCLientFormErrors({
+         ...clientFormErrors,
+         [name]: ''
+       }))
+       .catch(error => setCLientFormErrors({
+         ...clientFormErrors,
+         [name]: error.errors[0]
+       }))
+      setClientFormValues({
+        ...clientFormValues,
+        [name]: value
+      })
   }
 
 
@@ -71,6 +82,9 @@ const submitForm = () => {
 
 
 // SIDE EFFECT //
+useEffect(() => {
+  schema.isValid(clientFormValues).then((valid) => setDisabled(!valid));
+}, [clientFormValues])
 
 
 
@@ -95,8 +109,11 @@ const submitForm = () => {
           errors = {clientFormErrors}
         />
       </Route>
-      <Route path='/register/instructor'></Route>
+      <Route path='/register'></Route>
       <Route path='/login'></Route>
+      <Route path='/dashboard'>
+        {/* this leads to the client dashboard after the sign up process will change to the appropriate endpoint when provided with that information */}
+      </Route>
     </div>
   );
 }
