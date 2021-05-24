@@ -166,6 +166,60 @@ nav {
   margin-left: -1rem;
 }
 
+/* Login Form Styling */
+.login-image {
+  height: 8rem;
+  width: 8rem;
+  margin-top: 2rem;
+  margin-bottom: -.7rem;
+}
+
+.loginCheckbox {
+  display: flex;
+  flex-direction: row;
+  margin-left: 15.2rem;
+  margin-top: -.5rem;
+}
+
+.login-checkbox-text {
+  font-size: .65rem;
+  margin-top: .8rem;
+}
+
+.login-text {
+  display: flex;
+  flex-direction: row;
+  font-size: .65rem;
+  margin-top: .8rem;
+  margin-left: 15.2rem;
+}
+
+.white-space {
+  font-size: .65rem;
+  margin-top: .8rem;
+  color: white;
+}
+
+.login-text-link {
+  margin-top: .8rem;
+  margin-left: .4rem;
+  color: black;
+  font-size: .60rem;
+  display: flex;
+  justify-content: flex-end;
+  justify-content: space-between;
+}
+
+.login-button{
+  margin-top: 1rem;
+  width: 15rem;
+}
+
+.under-button-text {
+  margin-left: 5rem;
+}
+
+
 /* Instructor Sign Up Form Styling */
 /* .xo {
   color: orange;

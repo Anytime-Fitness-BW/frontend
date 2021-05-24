@@ -8,10 +8,12 @@ import ClientSignUpForm from './components/createClientAccount/signUpForm'
 import { schema } from './components/createClientAccount/clientFormSchema'
 import InstructorSignUp from './components/createInstructorAccount/InstructorSignUp'
 import { instructorSchema } from './components/createInstructorAccount/instructorFormSchema'
+import LoginForm from './components/login/loginForm'
+import { loginSchema } from './components/login/loginSchema'
 
 
 
-/// INITIAL STATES ///
+/// INITIAL CLIENT STATES ///
 const initialClientFormValues = {
   /// TEXT INPUTS ///
   first_name: '',
@@ -21,20 +23,6 @@ const initialClientFormValues = {
   username: '',
   email: '',
   password: '',
-  /// CHECKBOX - TERMS OF SERVICE ///
-  terms: false,
-}
-
-const initialInstructorFormValues = {
-  /// TEXT INPUTS ///
-  first_name: '',
-  last_name: '',
-  city: '',
-  zipcode: '',
-  username: '',
-  email: '',
-  password: '',
-  auth_code: '',
   /// CHECKBOX - TERMS OF SERVICE ///
   terms: false,
 }
@@ -49,6 +37,21 @@ const initialClientsFormErrors = {
   password: '',
 }
 
+/// INITIAL INSTRUCTOR STATES ///
+const initialInstructorFormValues = {
+  /// TEXT INPUTS ///
+  first_name: '',
+  last_name: '',
+  city: '',
+  zipcode: '',
+  username: '',
+  email: '',
+  password: '',
+  auth_code: '',
+  /// CHECKBOX - TERMS OF SERVICE ///
+  terms: false,
+}
+
 const initialInstructorFormErrors = {
   first_name: '',
   last_name: '',
@@ -59,6 +62,24 @@ const initialInstructorFormErrors = {
   password: '',
   auth_code: '',
 }
+
+/// INITIAL LOGIN STATES ///
+const initialLoginFormValues = {
+  /// TEXT INPUTS ///
+  username_or_email: '',
+  password: '',
+  auth_code: '',
+  /// CHECKBOX - REMEMBER ME ///
+  remember_me: false,
+}
+
+const initialLoginFormErrors = {
+  username_or_email: '',
+  password: '',
+  auth_code: '',
+}
+
+
 
 
 function App() {
@@ -73,6 +94,12 @@ function App() {
   const [instructorFormValues, setInstructorFormValues] = useState(initialInstructorFormValues)     // objects
   const [instructorFormErrors, setInstructorFormErrors] = useState(initialInstructorFormErrors)     // objects
   const [instructorDisabled, setInstructorDisabled] = useState(true)                                // objects
+
+  //  LOGIN STATES //
+  const [login, setLogin] = useState([])                                            // array of login objects
+  const [loginFormValues, setLoginFormValues] = useState(initialLoginFormValues)    // objects
+  const [loginFormErrors, setLoginFormErrors] = useState(initialLoginFormErrors)    // objects
+  const [loginDisabled, setLoginDisabled] = useState(true)                          // objects
   
 
 
@@ -91,6 +118,15 @@ function App() {
     axios.post('https://anytime-fitness-bw.herokuapp.com/', newInstructor)
       .then(({data}) => {
         setInstructor([data, ...instructor])
+        console.log(data)
+      })
+      .catch(error => console.log('Error Posting Instructors:', error))
+  }
+
+  const postNewLogin = (newLogin) => {
+    axios.post('https://anytime-fitness-bw.herokuapp.com/', newLogin)
+      .then(({data}) => {
+        setLogin([data, ...login])
         console.log(data)
       })
       .catch(error => console.log('Error Posting Instructors:', error))
@@ -133,6 +169,23 @@ function App() {
       })
   }
 
+  const loginInputChanges = (name, value) => {
+    // yup.reach(instructorSchema, name)
+    //    .validate(value)
+    //    .then(() => setInstructorFormErrors({
+    //      ...instructorFormErrors,
+    //      [name]: ''
+    //    }))
+    //    .catch(error => setInstructorFormErrors({
+    //      ...instructorFormErrors,
+    //      [name]: error.errors[0]
+    //    }))
+      setLoginFormValues({
+        ...loginFormValues,
+        [name]: value
+      })
+  }
+
 
 const submitForm = () => {
   postNewClient(clientFormValues)
@@ -142,6 +195,11 @@ const submitForm = () => {
 const instructorSubmitForm = () => {
   postNewInstructor(instructorFormValues)
   console.log(postNewInstructor)
+}
+
+const loginSubmitForm = () => {
+  postNewLogin(loginFormValues)
+  console.log(postNewLogin)
 }
 
 
@@ -182,7 +240,15 @@ useEffect(() => {
           instructorErrors = {instructorFormErrors}
         />
       </Route>
-      <Route path='/login'></Route>
+      <Route path='/login'>
+        <LoginForm 
+          loginValues = {loginFormValues}
+          loginChange = {loginInputChanges}
+          loginSubmit = {loginSubmitForm}
+          loginDisabled = {loginDisabled}
+          loginErrors = {loginFormErrors}
+        />
+      </Route>
       <Route path='/dashboard'>
         {/* this leads to the client dashboard after the sign up process will change to the appropriate endpoint when provided with that information */}
       </Route>
