@@ -100,7 +100,7 @@ export default function LoginForm(props) {
                 </button>
                 <div className='login-text'>
                     <p>Not Registered?</p>
-                    <Link className='bottom-text-link' to='/login'>Click here</Link>
+                    <Link className='bottom-text-link' to='/'>Click here</Link>
                 </div>
                 <div>
                     <div>{loginErrors.username_or_email}</div>
