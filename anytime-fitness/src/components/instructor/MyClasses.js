@@ -22,7 +22,10 @@ const MyClasses = () => {
   useEffect(()=>{
     axios
       .get('')
-      .then(res=>{console.log('MyClasses get RES', res)})
+      .then(res=>{
+        console.log('MyClasses get RES', res)
+        
+      })
       .then(err=>{console.log('MyClasses get ERR', err)})
   }, [])
 

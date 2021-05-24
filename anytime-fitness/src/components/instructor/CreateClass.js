@@ -12,6 +12,7 @@ const initialState = {
   location: '',
   intensity: '',
   price: '',
+  attendees: '',
   maxSize: '',
   confirm: false,
 }
