@@ -16,7 +16,7 @@ const initialState = {
 }
 
 
-const AddClass = () => {
+const AddClass = (props) => {
   const [classes, setClasses] = useState(initialState)
   const { push } = useHistory()
 
@@ -51,7 +51,6 @@ const AddClass = () => {
       const handleSubmit = e => {
         e.preventDefault()
         props.addClasses(classes)
-        
       }
 
   return (
