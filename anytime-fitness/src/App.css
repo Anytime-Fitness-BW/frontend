@@ -82,7 +82,7 @@ nav {
   height: 2rem;
 }
 
-/* Client Sign Up Form Styling */
+/* Sign Up Forms Styling */
 #signUpForm {
   display: flex;
   flex-direction: column;
@@ -161,3 +161,73 @@ nav {
   margin-left: .4rem;
   color: black;
 }
+
+.button{
+  margin-left: -1rem;
+}
+
+/* Login Form Styling */
+.login-image {
+  height: 8rem;
+  width: 8rem;
+  margin-top: 2rem;
+  margin-bottom: -.7rem;
+}
+
+.loginCheckbox {
+  display: flex;
+  flex-direction: row;
+  margin-top: -.5rem;
+  justify-content: center;
+}
+
+.login-checkbox-text {
+  font-size: .65rem;
+  margin-top: .8rem;
+}
+
+.login-text {
+  display: flex;
+  flex-direction: row;
+  font-size: .65rem;
+  margin-top: .8rem;
+  justify-content: center;
+}
+
+.white-space {
+  font-size: .65rem;
+  margin-top: .8rem;
+  color: white;
+}
+
+.login-text-link {
+  margin-top: .8rem;
+  margin-left: .4rem;
+  color: black;
+  font-size: .60rem;
+  display: flex;
+  justify-content: flex-end;
+  justify-content: space-between;
+}
+
+.login-button{
+  margin-top: 1rem;
+  width: 15rem;
+}
+
+
+
+
+/* Instructor Sign Up Form Styling */
+/* .xo {
+  color: orange;
+}
+
+.personalInfo {
+  display: flex;
+}
+
+.accountInfo {
+  display:flex;
+  flex-direction: column;
+} */
