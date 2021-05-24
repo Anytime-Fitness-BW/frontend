@@ -82,7 +82,7 @@ nav {
   height: 2rem;
 }
 
-/* Client Sign Up Form Styling */
+/* Sign Up Forms Styling */
 #signUpForm {
   display: flex;
   flex-direction: column;
@@ -160,6 +160,10 @@ nav {
   margin-top: .6rem;
   margin-left: .4rem;
   color: black;
+}
+
+.button{
+  margin-left: -1rem;
 }
 
 /* Instructor Sign Up Form Styling */

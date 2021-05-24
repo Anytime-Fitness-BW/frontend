@@ -133,7 +133,7 @@ export default function ClientSignUpForm(props) {
                 </section>
 
                 <section>
-                    <button disabled={disabled} id='submit-button'>
+                    <button className='button' disabled={disabled} id='submit-button'>
                         CREATE ACCOUNT
                     </button>
                     <div className='bottom-text'>

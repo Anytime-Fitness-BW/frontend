@@ -6,7 +6,8 @@ import axios from 'axios'
 import * as yup from 'yup'
 import ClientSignUpForm from './components/createClientAccount/signUpForm'
 import { schema } from './components/createClientAccount/clientFormSchema'
-import InstructorSignUp from './components/createInstructorAccount/InstructorSignUp';
+import InstructorSignUp from './components/createInstructorAccount/InstructorSignUp'
+import { instructorSchema } from './components/createInstructorAccount/instructorFormSchema'
 
 
 
@@ -33,6 +34,7 @@ const initialInstructorFormValues = {
   username: '',
   email: '',
   password: '',
+  auth_code: '',
   /// CHECKBOX - TERMS OF SERVICE ///
   terms: false,
 }
@@ -45,7 +47,6 @@ const initialClientsFormErrors = {
   username: '',
   email: '',
   password: '',
-  auth_code: '',
 }
 
 const initialInstructorFormErrors = {
@@ -115,10 +116,32 @@ function App() {
       })
   }
 
+  const instructorInputChanges = (name, value) => {
+    yup.reach(instructorSchema, name)
+       .validate(value)
+       .then(() => setInstructorFormErrors({
+         ...instructorFormErrors,
+         [name]: ''
+       }))
+       .catch(error => setInstructorFormErrors({
+         ...instructorFormErrors,
+         [name]: error.errors[0]
+       }))
+      setInstructorFormValues({
+        ...instructorFormValues,
+        [name]: value
+      })
+  }
+
 
 const submitForm = () => {
   postNewClient(clientFormValues)
   console.log(postNewClient)
+}
+
+const instructorSubmitForm = () => {
+  postNewInstructor(instructorFormValues)
+  console.log(postNewInstructor)
 }
 
 
@@ -127,6 +150,9 @@ useEffect(() => {
   schema.isValid(clientFormValues).then((valid) => setDisabled(!valid));
 }, [clientFormValues])
 
+useEffect(() => {
+  instructorSchema.isValid(instructorFormValues).then((valid) => setInstructorDisabled(!valid));
+}, [instructorFormValues])
 
 
 
@@ -148,7 +174,13 @@ useEffect(() => {
         />
       </Route>
       <Route path='/register/instructor'>
-        <InstructorSignUp />
+        <InstructorSignUp
+          instructorValues = {instructorFormValues}
+          instructorChange = {instructorInputChanges}
+          instructorSubmit = {instructorSubmitForm}
+          instructorDisabled = {instructorDisabled}
+          instructorErrors = {instructorFormErrors}
+        />
       </Route>
       <Route path='/login'></Route>
       <Route path='/dashboard'>
