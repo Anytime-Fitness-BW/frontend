@@ -1,7 +1,7 @@
 import './App.css';
 
 import InstructorSignUp from './InstructorSignUp';
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import {  Route, Link } from "react-router-dom";
 import HomePage from './components/HomePage'
 import axios from 'axios'
