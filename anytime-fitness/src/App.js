@@ -170,16 +170,16 @@ function App() {
   }
 
   const loginInputChanges = (name, value) => {
-    // yup.reach(instructorSchema, name)
-    //    .validate(value)
-    //    .then(() => setInstructorFormErrors({
-    //      ...instructorFormErrors,
-    //      [name]: ''
-    //    }))
-    //    .catch(error => setInstructorFormErrors({
-    //      ...instructorFormErrors,
-    //      [name]: error.errors[0]
-    //    }))
+    yup.reach(loginSchema, name)
+       .validate(value)
+       .then(() => setLoginFormErrors({
+         ...loginFormErrors,
+         [name]: ''
+       }))
+       .catch(error => setLoginFormErrors({
+         ...loginFormErrors,
+         [name]: error.errors[0]
+       }))
       setLoginFormValues({
         ...loginFormValues,
         [name]: value
@@ -212,6 +212,9 @@ useEffect(() => {
   instructorSchema.isValid(instructorFormValues).then((valid) => setInstructorDisabled(!valid));
 }, [instructorFormValues])
 
+useEffect(() => {
+  loginSchema.isValid(loginFormValues).then((valid) => setLoginDisabled(!valid));
+}, [loginFormValues])
 
 
 

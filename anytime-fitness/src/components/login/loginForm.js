@@ -97,12 +97,10 @@ export default function LoginForm(props) {
             <section>
                 <button className='login-button' disabled={loginDisabled} id='submit-button'>
                         SIGN IN
-                    </button>
-                <div className='under-button-text'>
-                    <div className='login-text'>
-                        <p>Not Registered?</p>
-                        <Link className='bottom-text-link' to='/login'>Click here</Link>
-                    </div>
+                </button>
+                <div className='login-text'>
+                    <p>Not Registered?</p>
+                    <Link className='bottom-text-link' to='/login'>Click here</Link>
                 </div>
                 <div>
                     <div>{loginErrors.username_or_email}</div>

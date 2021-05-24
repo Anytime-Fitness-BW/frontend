@@ -177,8 +177,8 @@ nav {
 .loginCheckbox {
   display: flex;
   flex-direction: row;
-  margin-left: 15.2rem;
   margin-top: -.5rem;
+  justify-content: center;
 }
 
 .login-checkbox-text {
@@ -191,7 +191,7 @@ nav {
   flex-direction: row;
   font-size: .65rem;
   margin-top: .8rem;
-  margin-left: 15.2rem;
+  justify-content: center;
 }
 
 .white-space {
@@ -215,9 +215,7 @@ nav {
   width: 15rem;
 }
 
-.under-button-text {
-  margin-left: 5rem;
-}
+
 
 
 /* Instructor Sign Up Form Styling */
