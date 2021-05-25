@@ -136,7 +136,7 @@ const AddClass = (props) => {
       </form>
 
       <div className='classes-container'>
-        <section className='class-card'>
+        {/* <section className='class-card'>
           <img className='class-img' src='https://i.stack.imgur.com/y9DpT.jpg' alt='placeholder.img' />
           <div className='mini-section-container'>
             <div className='mini-section'>
@@ -148,24 +148,24 @@ const AddClass = (props) => {
             </div>
           </div>
           <p className='price'>Price: $45</p>
-        </section>
+        </section> */}
 
 
-        <section className='class-card'>
-          <img className='class-img' src='https://i.stack.imgur.com/y9DpT.jpg' alt='placeholder.img' />
-          <div className='mini-section-container'>
-            <div className='mini-section'>
-              <p className='class-info'>Class Name: Power Hour</p>
-              <p className='class-info'>Instructor: Alison Slate</p>
-              <p className='class-info'>Time: 4:30pm to 6:00pm</p>
-              <p className='class-info'>Date: June 13, 2021</p>
-              <p className='class-info'>Location: Tampa, FL</p>
+        <section className='ac-class-card'>
+          <img className='ac-class-img' src='https://i.stack.imgur.com/y9DpT.jpg' alt='placeholder.img' />
+          <div className='ac-mini-section-container'>
+            <div className='ac-mini-section'>
+              <p className='ac-class-info'>Class Name: Power Hour</p>
+              <p className='ac-class-info'>Instructor: Alison Slate</p>
+              <p className='ac-class-info'>Time: 4:30pm to 6:00pm</p>
+              <p className='ac-class-info'>Date: June 13, 2021</p>
+              <p className='ac-class-info'>Location: Tampa, FL</p>
             </div>
           </div>
           <p className='price'>Price: $30</p>
         </section>
 
-        <section className='class-card'>
+        {/* <section className='class-card'>
           <img className='class-img' src='https://i.stack.imgur.com/y9DpT.jpg' alt='placeholder.img' />
           <div className='mini-section-container'>
             <div className='mini-section'>
@@ -177,13 +177,9 @@ const AddClass = (props) => {
             </div>
           </div>
           <p className='price'>Price: $80</p>
-        </section>
+        </section> */}
       </div>
-      <div className='class-signup-buttons'>
-        <button className='signup-button'>REGISTER TODAY</button>
-        <button className='signup-button'>REGISTER TODAY</button>
-        <button className='signup-button'>REGISTER TODAY</button>
-      </div>
+      <button className='register-button'>REGISTER TODAY</button>
     </div>
   )
 }

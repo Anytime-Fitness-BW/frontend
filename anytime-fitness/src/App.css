@@ -383,4 +383,50 @@ nav {
   text-decoration: underline;
 }
 
+.ac-class-card {
+  border: 1px solid black;
+  width: 35rem;
+  height: 32.5rem;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  margin-right: 1rem;
+  font-size: .9rem;
+}
+
+.ac-class-img {
+  height: 15.5rem;
+  width: 35rem;
+  border-bottom: 1px solid black;
+}
+
+.ac-mini-section-container {
+  display: flex;
+  flex-direction: row;
+  text-decoration: underline;
+  justify-content: center;
+  margin-top: .5rem;
+  border: 1px solid black;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.ac-mini-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.ac-class-info {
+ text-align: left;
+ margin-left: 1rem;
+}
+
+.register-button{
+  margin-bottom: 3rem;
+  margin-right: 1rem;
+  width: 8rem;
+  margin-left: 13rem;
+  margin-right: 11rem;
+  margin-top: 1rem;
+}
+
 
