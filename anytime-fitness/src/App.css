@@ -107,10 +107,36 @@ nav {
   margin-bottom: -1rem;
 }
 
+.signup-title {
+  margin-left: -2rem;
+}
+
 .hr2 {
   width: 20rem;
   margin-top: -1rem;
   margin-bottom: 1rem;
+}
+
+.signup-form-image {
+  height: 10rem;
+  width: 10rem;
+  margin-top: 2rem;
+  margin-bottom: -.7rem;
+  margin-left: -3rem;
+}
+
+.signup-hr {
+  width: 20rem;
+  margin-top: 1rem;
+  margin-bottom: -1rem;
+  margin-left: 29.5rem;
+}
+
+.signup-hr2 {
+  width: 20rem;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+  margin-left: 29.5rem;
 }
 
 .form-container {
@@ -427,6 +453,28 @@ nav {
   margin-left: 13rem;
   margin-right: 11rem;
   margin-top: 1rem;
+}
+
+/* Instructor Dashboard Styling */
+.instructor-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 19rem;
+}
+
+
+
+/* Create Class - Instructor Dashboard Styling */
+#createClassForm {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -0.2rem;
+  margin-left: 7rem;
+  margin-right: 7rem;
+  font-weight: 600;
 }
 
 

@@ -46,7 +46,7 @@ const CreateClass = (props) => {
   return (
     <div>
       <h1>Create a New Class</h1>
-      <form onSubmit={submitHandler}>
+      <form id='createClassForm' onSubmit={submitHandler}>
         <label>
           <input
             type="text"

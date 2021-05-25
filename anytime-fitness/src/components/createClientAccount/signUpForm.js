@@ -38,13 +38,13 @@ export default function ClientSignUpForm(props) {
             </nav>
             <div>
                 <img
-                    className='form-image'
+                    className='signup-form-image'
                     src='https://pic.onlinewebfonts.com/svg/img_401900.png'
                     alt='user.img'
                 />
-                <hr className='hr'/>
-                <h4> Create an Account </h4>
-                <hr className='hr2'/>
+                <hr className='signup-hr'/>
+                <h4 className='signup-title'> Create an Account </h4>
+                <hr className='signup-hr2'/>
             </div>
             <div className='form-container'>
                 <section className='first-four-text-inputs'>

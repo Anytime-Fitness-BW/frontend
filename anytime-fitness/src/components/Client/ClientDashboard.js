@@ -104,7 +104,6 @@ const ClientDashboard = () => {
 
       <div>
         {/* This is here so we can access the instructor dashboard until the auth code is hooked up */}
-        <Link className='space' to="/dashboard/add">Clients</Link>
         <Link className='space' to="/dashboard/instructor">Instructors</Link>
       </div>
 

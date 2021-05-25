@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
-import { useHistory } from 'react-router'
+import { Link, useHistory } from 'react-router-dom'
 
 const initialState = {
   className: '',
@@ -136,21 +136,6 @@ const AddClass = (props) => {
       </form>
 
       <div className='classes-container'>
-        {/* <section className='class-card'>
-          <img className='class-img' src='https://i.stack.imgur.com/y9DpT.jpg' alt='placeholder.img' />
-          <div className='mini-section-container'>
-            <div className='mini-section'>
-              <p className='class-info'>Class Name: Wishful Shrinking</p>
-              <p className='class-info'>Instructor: Alex Smith</p>
-              <p className='class-info'>Time: 7:30pm to 9:00pm</p>
-              <p className='class-info'>Date: June 6, 2021</p>
-              <p className='class-info'>Location: Orlando, FL</p>
-            </div>
-          </div>
-          <p className='price'>Price: $45</p>
-        </section> */}
-
-
         <section className='ac-class-card'>
           <img className='ac-class-img' src='https://i.stack.imgur.com/y9DpT.jpg' alt='placeholder.img' />
           <div className='ac-mini-section-container'>
@@ -164,22 +149,14 @@ const AddClass = (props) => {
           </div>
           <p className='price'>Price: $30</p>
         </section>
-
-        {/* <section className='class-card'>
-          <img className='class-img' src='https://i.stack.imgur.com/y9DpT.jpg' alt='placeholder.img' />
-          <div className='mini-section-container'>
-            <div className='mini-section'>
-              <p className='class-info'>Class Name: Fab, Fit, and Fun</p>
-              <p className='class-info'>Instructor: Mary Wilson</p>
-              <p className='class-info'>Time: 1:30pm to 3:00pm</p>
-              <p className='class-info'>Date: June 24, 2021</p>
-              <p className='class-info'>Location: Miami, FL</p>
-            </div>
-          </div>
-          <p className='price'>Price: $80</p>
-        </section> */}
       </div>
       <button className='register-button'>REGISTER TODAY</button>
+      <nav>
+        <h1></h1>
+        <div className='client-nav-links'>
+          <Link to='/dashboard'>Back to Dashboard</Link>
+        </div>
+      </nav>
     </div>
   )
 }
