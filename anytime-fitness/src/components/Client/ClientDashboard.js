@@ -49,7 +49,7 @@ const ClientDashboard = () => {
           <img className='class-img' src='https://i.stack.imgur.com/y9DpT.jpg' alt='placeholder.img' />
           <div className='mini-section-container'>
             <div className='mini-section'>
-              <p className='class-info'>Class Name: Power Hour</p>
+              <p className='class-info'>Class Name: Wishful Shrinking</p>
               <p className='class-info'>Location: Orlando, FL</p>
               <p className='class-info'>Date: June 6, 2021</p>
               <p className='class-info'>Time: 7:30pm to 9:00pm</p>
@@ -69,37 +69,37 @@ const ClientDashboard = () => {
           <div className='mini-section-container'>
             <div className='mini-section'>
               <p className='class-info'>Class Name: Power Hour</p>
-              <p className='class-info'>Location: Orlando, FL</p>
-              <p className='class-info'>Date: June 6, 2021</p>
-              <p className='class-info'>Time: 7:30pm to 9:00pm</p>
+              <p className='class-info'>Location: Tampa, FL</p>
+              <p className='class-info'>Date: June 13, 2021</p>
+              <p className='class-info'>Time: 4:30pm to 6:00pm</p>
             </div>
             <div className='mini-section-2'>
-              <p className='class-info'>Duration: 2 months</p>
-              <p className='class-info'>Level: Beginner</p>
-              <p className='class-info'>Type: Circuit Training</p>
-              <p className='class-info'>Instructor: Jackson Smith</p>
+              <p className='class-info'>Duration: 1 months</p>
+              <p className='class-info'>Level: Intermediate</p>
+              <p className='class-info'>Type: Cycling</p>
+              <p className='class-info'>Instructor: Alison Slate</p>
             </div>
           </div>
-          <p className='price'>Price: $45</p>
+          <p className='price'>Price: $30</p>
         </section>
 
         <section className='class-card'>
           <img className='class-img' src='https://i.stack.imgur.com/y9DpT.jpg' alt='placeholder.img' />
           <div className='mini-section-container'>
             <div className='mini-section'>
-              <p className='class-info'>Class Name: Power Hour</p>
-              <p className='class-info'>Location: Orlando, FL</p>
-              <p className='class-info'>Date: June 6, 2021</p>
-              <p className='class-info'>Time: 7:30pm to 9:00pm</p>
+              <p className='class-info'>Class Name: Fab, Fit, and Fun</p>
+              <p className='class-info'>Location: Miami, FL</p>
+              <p className='class-info'>Date: June 24, 2021</p>
+              <p className='class-info'>Time: 1:30pm to 3:00pm</p>
             </div>
             <div className='mini-section-2'>
-              <p className='class-info'>Duration: 2 months</p>
-              <p className='class-info'>Level: Beginner</p>
-              <p className='class-info'>Type: Circuit Training</p>
-              <p className='class-info'>Instructor: Jackson Smith</p>
+              <p className='class-info'>Duration: 4 months</p>
+              <p className='class-info'>Level: Expert</p>
+              <p className='class-info'>Type: Bootcamp</p>
+              <p className='class-info'>Instructor: Mary Wilson</p>
             </div>
           </div>
-          <p className='price'>Price: $45</p>
+          <p className='price'>Price: $80</p>
         </section>
       </div>
       <div>
