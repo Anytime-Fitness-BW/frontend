@@ -16,9 +16,11 @@ const ClientDashboard = () => {
           </label>
         </section>
         <section className='title'>
+          <p className='white-space'>ignore this space p ignore this space p ignore this space p ignore this space p ignore this ignore this</p>
           <h3>ANYWHERE FITNESS</h3>
         </section>
         <section className='user'>
+          <p className='white-space'>ignore this space p ignore this space p </p>
           <img className='user-image' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7wrKjpbjvQzLHlQfvKO8gsopOJBvbCEXe1A&usqp=CAU' alt='user.img' />
           <h4 className='username'>Client Name</h4>
         </section>
@@ -41,9 +43,63 @@ const ClientDashboard = () => {
           <h4>Expert</h4>
         </section>
       </div>
+
       <div className='classes-container'>
         <section className='class-card'>
+          <img className='class-img' src='https://i.stack.imgur.com/y9DpT.jpg' alt='placeholder.img' />
+          <div className='mini-section-container'>
+            <div className='mini-section'>
+              <p className='class-info'>Class Name: Power Hour</p>
+              <p className='class-info'>Location: Orlando, FL</p>
+              <p className='class-info'>Date: June 6, 2021</p>
+              <p className='class-info'>Time: 7:30pm to 9:00pm</p>
+            </div>
+            <div className='mini-section-2'>
+              <p className='class-info'>Duration: 2 months</p>
+              <p className='class-info'>Level: Beginner</p>
+              <p className='class-info'>Type: Circuit Training</p>
+              <p className='class-info'>Instructor: Jackson Smith</p>
+            </div>
+          </div>
+          <p className='price'>Price: $45</p>
+        </section>
 
+        <section className='class-card'>
+          <img className='class-img' src='https://i.stack.imgur.com/y9DpT.jpg' alt='placeholder.img' />
+          <div className='mini-section-container'>
+            <div className='mini-section'>
+              <p className='class-info'>Class Name: Power Hour</p>
+              <p className='class-info'>Location: Orlando, FL</p>
+              <p className='class-info'>Date: June 6, 2021</p>
+              <p className='class-info'>Time: 7:30pm to 9:00pm</p>
+            </div>
+            <div className='mini-section-2'>
+              <p className='class-info'>Duration: 2 months</p>
+              <p className='class-info'>Level: Beginner</p>
+              <p className='class-info'>Type: Circuit Training</p>
+              <p className='class-info'>Instructor: Jackson Smith</p>
+            </div>
+          </div>
+          <p className='price'>Price: $45</p>
+        </section>
+
+        <section className='class-card'>
+          <img className='class-img' src='https://i.stack.imgur.com/y9DpT.jpg' alt='placeholder.img' />
+          <div className='mini-section-container'>
+            <div className='mini-section'>
+              <p className='class-info'>Class Name: Power Hour</p>
+              <p className='class-info'>Location: Orlando, FL</p>
+              <p className='class-info'>Date: June 6, 2021</p>
+              <p className='class-info'>Time: 7:30pm to 9:00pm</p>
+            </div>
+            <div className='mini-section-2'>
+              <p className='class-info'>Duration: 2 months</p>
+              <p className='class-info'>Level: Beginner</p>
+              <p className='class-info'>Type: Circuit Training</p>
+              <p className='class-info'>Instructor: Jackson Smith</p>
+            </div>
+          </div>
+          <p className='price'>Price: $45</p>
         </section>
       </div>
       <div>

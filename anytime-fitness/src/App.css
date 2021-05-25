@@ -232,6 +232,7 @@ nav {
   display: flex;
   flex-direction: row wrap;
   align-items: center;
+  justify-content: center;
 }
 
 .search-image {
@@ -245,7 +246,9 @@ nav {
 }
 
 .title{
-  margin-left: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .user{
@@ -254,6 +257,8 @@ nav {
   margin-top: .5rem;
   margin-left: 8rem;
   font-size: small;
+  display: flex;
+  justify-content: center;
 }
 
 .user-image {
@@ -288,6 +293,56 @@ nav {
   margin-top: -.5rem;
 }
 
+.classes-container {
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: space-around;
+}
+
+.class-card {
+  border: 1px solid black;
+  width: 35rem;
+  height: 37rem;
+  margin-top: 3rem;
+  margin-left: 1rem;
+}
+
+.class-img {
+  width: 35rem;
+  border-bottom: 1px solid black;
+}
+
+.mini-section-container {
+  display: flex;
+  flex-direction: row;
+  text-decoration: underline;
+  justify-content: center;
+  margin-top: 1.5rem;
+  border: 1px solid black;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.mini-section {
+  display: flex;
+  flex-direction: column;
+  font-size: medium;
+}
+
+.mini-section-2 {
+  display: flex;
+  flex-direction: column;
+  font-size: medium;
+}
+
+.class-info {
+ text-align: left;
+ margin-left: 1rem;
+}
+
+.price {
+  text-decoration: underline;
+}
 
 
 
