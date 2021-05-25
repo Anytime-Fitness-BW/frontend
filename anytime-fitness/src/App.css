@@ -215,6 +215,79 @@ nav {
   width: 15rem;
 }
 
+.space{
+  margin-left: 2rem;
+}
+
+/* Client Dashboard Styling */
+.header {
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: row wrap;
+  align-items: center;
+}
+
+.search-image {
+  height: 2rem;
+  width: 2rem;
+}
+
+.search {
+  border-radius: .5rem;
+  height: 1.5rem;
+}
+
+.title{
+  margin-left: 12rem;
+}
+
+.user{
+  display: flex;
+  flex-direction: row wrap;
+  margin-top: .5rem;
+  margin-left: 8rem;
+  font-size: small;
+}
+
+.user-image {
+  height: 1.7rem;
+  width: 1.7rem;
+  margin-top: .5rem;
+}
+
+.username {
+  margin-left: .2rem;
+  margin-top: .95rem;
+}
+
+.menu-image {
+  height: 5rem;
+  width: 5rem;
+}
+
+.middle-section {
+  text-decoration: underline;
+}
+
+.title-2 {
+  margin-top: 3rem;
+}
+
+.filter {
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: space-evenly;
+  font-size: small;
+  margin-top: -.5rem;
+}
+
 
 
 

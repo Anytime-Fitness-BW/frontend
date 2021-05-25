@@ -25,22 +25,22 @@ const CreateClass = (props) => {
   const changeHandler = (e) => {
     setFormValues({
       ...formValues,
-    [e.target.name]: e.target.value
+      [e.target.name]: e.target.value
     })
   }
 
   const submitHandler = (e) => {
     e.preventDefault()
-    
-    
+
+
     axios
       .post('', formValues)
-      .then(res=>{
-        console.log("create post RES",res)
+      .then(res => {
+        console.log("create post RES", res)
         props.addClasses(formValues)
         push('/instructor/classes')
       })
-      .catch(err=>{console.log("create post ERR", err)})
+      .catch(err => { console.log("create post ERR", err) })
   }
 
   return (
@@ -48,93 +48,93 @@ const CreateClass = (props) => {
       <h1>Create a New Class</h1>
       <form onSubmit={submitHandler}>
         <label>
-          <input 
-          type="text"
-          name="className"
-          value={formValues.className}
-          onChange={changeHandler}
-          placeholder="Class Name"
+          <input
+            type="text"
+            name="className"
+            value={formValues.className}
+            onChange={changeHandler}
+            placeholder="Class Name"
           />
         </label>
         <label>
-          <input 
-          type="date"
-          name="date"
-          value={formValues.date}
-          onChange={changeHandler}
-          placeholder="Date"
+          <input
+            type="date"
+            name="date"
+            value={formValues.date}
+            onChange={changeHandler}
+            placeholder="Date"
           />
         </label>
         <label>
-          <input 
-          type="time"
-          name="time"
-          value={formValues.time}
-          onChange={changeHandler}
-          placeholder="Time"
+          <input
+            type="time"
+            name="time"
+            value={formValues.time}
+            onChange={changeHandler}
+            placeholder="Time"
           />
         </label>
         <label>
-          <input 
-          type="text"
-          name="duration"
-          value={formValues.duration}
-          onChange={changeHandler}
-          placeholder="Duration"
+          <input
+            type="text"
+            name="duration"
+            value={formValues.duration}
+            onChange={changeHandler}
+            placeholder="Duration"
           />
         </label>
         <label>
-          <input 
-          type="text"
-          name="type"
-          value={formValues.type}
-          onChange={changeHandler}
-          placeholder="Type"
+          <input
+            type="text"
+            name="type"
+            value={formValues.type}
+            onChange={changeHandler}
+            placeholder="Type"
           />
         </label>
         <label>
-          <input 
-          type="text"
-          name="location"
-          value={formValues.location}
-          onChange={changeHandler}
-          placeholder="Location"
+          <input
+            type="text"
+            name="location"
+            value={formValues.location}
+            onChange={changeHandler}
+            placeholder="Location"
           />
         </label>
         <label>
-          <input 
-          type="text"
-          name="intensity"
-          value={formValues.intensity}
-          onChange={changeHandler}
-          placeholder="Intensity Level"
+          <input
+            type="text"
+            name="intensity"
+            value={formValues.intensity}
+            onChange={changeHandler}
+            placeholder="Intensity Level"
           />
         </label>
         <label>
-          <input 
-          type="text"
-          name="price"
-          value={formValues.price}
-          onChange={changeHandler}
-          placeholder="$ Price"
+          <input
+            type="text"
+            name="price"
+            value={formValues.price}
+            onChange={changeHandler}
+            placeholder="$ Price"
           />
         </label>
         <label>
-          <input 
-          type="text"
-          name="maxSize"
-          value={formValues.maxSize}
-          onChange={changeHandler}
-          placeholder="Max Class Size"
+          <input
+            type="text"
+            name="maxSize"
+            value={formValues.maxSize}
+            onChange={changeHandler}
+            placeholder="Max Class Size"
           />
         </label>
-        <label> 
-          <input 
-          type="checkbox"
-          name="confirm"
-          id="confirm"
-          value={formValues.confirm}
-          onChange={changeHandler}
+        <label>
+          <input
+            type="checkbox"
+            name="confirm"
+            id="confirm"
+            value={formValues.confirm}
+            onChange={changeHandler}
           />
           Check box to confirm class creation
         </label>
