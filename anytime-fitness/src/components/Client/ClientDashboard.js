@@ -16,11 +16,9 @@ const ClientDashboard = () => {
           </label>
         </section>
         <section className='title'>
-          <p className='white-space'>ignore this space p ignore this space p ignore this space p ignore this space p ignore this ignore this</p>
           <h3>ANYWHERE FITNESS</h3>
         </section>
         <section className='user'>
-          <p className='white-space'>ignore this space p ignore this space p </p>
           <img className='user-image' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7wrKjpbjvQzLHlQfvKO8gsopOJBvbCEXe1A&usqp=CAU' alt='user.img' />
           <h4 className='username'>Client Name</h4>
         </section>
@@ -58,7 +56,7 @@ const ClientDashboard = () => {
               <p className='class-info'>Duration: 2 months</p>
               <p className='class-info'>Level: Beginner</p>
               <p className='class-info'>Type: Circuit Training</p>
-              <p className='class-info'>Instructor: Jackson Smith</p>
+              <p className='class-info'>Instructor: Alex Smith</p>
             </div>
           </div>
           <p className='price'>Price: $45</p>

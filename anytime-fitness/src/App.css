@@ -249,6 +249,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 17.5rem;
 }
 
 .user{
@@ -301,14 +302,15 @@ nav {
 
 .class-card {
   border: 1px solid black;
-  width: 35rem;
-  height: 37rem;
+  width: 28rem;
+  height: 32.5rem;
   margin-top: 3rem;
   margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .class-img {
-  width: 35rem;
+  width: 28rem;
   border-bottom: 1px solid black;
 }
 
@@ -319,8 +321,8 @@ nav {
   justify-content: center;
   margin-top: 1.5rem;
   border: 1px solid black;
-  margin-left: 3rem;
-  margin-right: 3rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .mini-section {

@@ -90,7 +90,6 @@ export default function LoginForm(props) {
                     />
                 </label>
                 <p className='login-checkbox-text'>Remember me</p>
-                <p className='white-space'>ignore this space p</p>
                 <Link className='login-text-link' to='/'>Forget password?</Link>
             </section>
 
