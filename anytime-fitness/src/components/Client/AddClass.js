@@ -55,7 +55,8 @@ const AddClass = (props) => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <h1>Looking for a class?</h1>
+      {/* <form onSubmit={handleSubmit}>
         <label>
           <input 
           type="text"
@@ -143,9 +144,10 @@ const AddClass = (props) => {
           name="attendees"
           value={classes.confirm}
           onChange={changeHandler}
+          placeholder="Number of Attendees"
           />
         </label>
-      </form>
+      </form> */}
     </div>
   )
 }
