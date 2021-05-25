@@ -37,7 +37,7 @@ const InstructorDashboard = () => {
       </div>
 
       <section>
-        <h1>Welcome Back!</h1>
+        <h1 className='main-title'>Welcome Back!</h1>
       </section>
 
       <div className='dashboard-buttons'>

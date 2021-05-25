@@ -76,10 +76,26 @@ nav {
   height: 2rem;
 }
 
+.clientButton:hover {
+  box-shadow: 0 8px 16px 0 rgba(39, 17, 45, 0.1);
+  -webkit-transform: scale(1.05) translate(0px, -4px);
+  -ms-transform: scale(1.05) translate(0px, -4px);
+  transform: scale(1.05) translate(0px, -4px);
+  background-color: white;
+}
+
 .instructorButton {
   margin: 1rem;
   width: 12rem;
   height: 2rem;
+}
+
+.instructorButton:hover {
+  box-shadow: 0 8px 16px 0 rgba(39, 17, 45, 0.1);
+  -webkit-transform: scale(1.05) translate(0px, -4px);
+  -ms-transform: scale(1.05) translate(0px, -4px);
+  transform: scale(1.05) translate(0px, -4px);
+  background-color: white;
 }
 
 /* Sign Up Forms Styling */
@@ -380,6 +396,14 @@ nav {
   margin-top: 1rem;
 }
 
+.signup-button:hover {
+  box-shadow: 0 8px 16px 0 rgba(39, 17, 45, 0.1);
+  -webkit-transform: scale(1.05) translate(0px, -4px);
+  -ms-transform: scale(1.05) translate(0px, -4px);
+  transform: scale(1.05) translate(0px, -4px);
+  background-color: white;
+}
+
 .client-nav-links {
   display: flex;
   justify-content: space-between;
@@ -455,12 +479,58 @@ nav {
   margin-top: 1rem;
 }
 
+.register-button:hover {
+  box-shadow: 0 8px 16px 0 rgba(39, 17, 45, 0.1);
+  -webkit-transform: scale(1.05) translate(0px, -4px);
+  -ms-transform: scale(1.05) translate(0px, -4px);
+  transform: scale(1.05) translate(0px, -4px);
+  background-color: white;
+}
+
 /* Instructor Dashboard Styling */
 .instructor-title{
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 19rem;
+}
+
+.main-title {
+  margin-top: 8rem;
+  font-size: 3.5rem;
+}
+
+.dashboard-buttons {
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+}
+
+.button1 {
+  width: 30rem;
+  height: 10rem;
+  margin-right: 5rem;
+}
+
+.button1:hover {
+  box-shadow: 0 8px 16px 0 rgba(39, 17, 45, 0.1);
+  -webkit-transform: scale(1.05) translate(0px, -4px);
+  -ms-transform: scale(1.05) translate(0px, -4px);
+  transform: scale(1.05) translate(0px, -4px);
+  background-color: white;
+}
+
+.button2 {
+  width: 30rem;
+  height: 10rem;
+  margin-left: 5rem;
+}
+
+.button2:hover {
+  box-shadow: 0 8px 16px 0 rgba(39, 17, 45, 0.1);
+  -webkit-transform: scale(1.05) translate(0px, -4px);
+  -ms-transform: scale(1.05) translate(0px, -4px);
+  transform: scale(1.05) translate(0px, -4px);
+  background-color: white;
 }
 
 
@@ -476,5 +546,6 @@ nav {
   margin-right: 7rem;
   font-weight: 600;
 }
+
 
 
