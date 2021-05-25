@@ -9,8 +9,7 @@ export const loginSchema = yup.object().shape({
         .min(6, 'Must be at least 6 characters!')
         .required('Password is Required'),
     auth_code: yup
-        .string()
-        .min(6, 'Must be at least 6 characters!'),
+        .string(),
     remember_me: yup
         .boolean(),
 })
