@@ -35,17 +35,6 @@ const ClientDashboard = () => {
 
       <div className='middle-section'>
         <h2 className='title-2'>Find the Class for You!</h2>
-        <section className='filter'>
-          <h4>Sort By:</h4>
-          <h4>Time</h4>
-          <h4>Date</h4>
-          <h4>Duration</h4>
-          <h4>Type</h4>
-          <h4>Location</h4>
-          <h4>Beginner</h4>
-          <h4>Intermediate</h4>
-          <h4>Expert</h4>
-        </section>
       </div>
 
       <div className='classes-container'>
@@ -108,9 +97,9 @@ const ClientDashboard = () => {
         </section>
       </div>
       <div className='class-signup-buttons' onClick={onClick}>
-        <button className='signup-button'>SIGN UP</button>
-        <button className='signup-button'>SIGN UP</button>
-        <button className='signup-button'>SIGN UP</button>
+        <button className='signup-button'>SIGN UP FOR A CLASS TODAY</button>
+        <button className='signup-button'>SIGN UP FOR A CLASS TODAY</button>
+        <button className='signup-button'>SIGN UP FOR A CLASS TODAY</button>
       </div>
 
       <div>

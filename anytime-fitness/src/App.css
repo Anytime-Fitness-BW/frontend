@@ -346,11 +346,12 @@ nav {
 }
 
 .signup-button{
-  margin-top: 1rem;
+  margin-bottom: 3rem;
+  margin-right: 1rem;
   width: 8rem;
   margin-left: 11rem;
   margin-right: 11rem;
-  
+  margin-top: 1rem;
 }
 
 .client-nav-links {
@@ -362,4 +363,24 @@ nav {
   font-weight: bold;
   margin-right: 8px;
 }
+
+/* Client Dashboard - Add Class Page */
+.filter-bar {
+  margin-top: -2.8rem;
+  margin-left: .5rem;
+}
+
+.filter-input {
+  margin-top: -2.8rem;
+  margin-left: .5rem;
+}
+
+.sort-by {
+  margin-left: 5rem;
+  margin-top: 2.5rem;
+  margin-right: 1rem;
+  width: 10rem;
+  text-decoration: underline;
+}
+
 
