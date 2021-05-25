@@ -194,12 +194,6 @@ nav {
   justify-content: center;
 }
 
-.white-space {
-  font-size: .65rem;
-  margin-top: .8rem;
-  color: white;
-}
-
 .login-text-link {
   margin-top: .8rem;
   margin-left: .4rem;
@@ -216,7 +210,7 @@ nav {
 }
 
 .space{
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
 /* Client Dashboard Styling */
@@ -346,18 +340,26 @@ nav {
   text-decoration: underline;
 }
 
-
-
-/* Instructor Sign Up Form Styling */
-/* .xo {
-  color: orange;
-}
-
-.personalInfo {
+.class-signup-buttons {
   display: flex;
+  justify-content: space-between;
 }
 
-.accountInfo {
-  display:flex;
-  flex-direction: column;
-} */
+.signup-button{
+  margin-top: 1rem;
+  width: 8rem;
+  margin-left: 11rem;
+  margin-right: 11rem;
+  
+}
+
+.client-nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-decoration: underline;
+  color: black;
+  font-weight: bold;
+  margin-right: 8px;
+}
+

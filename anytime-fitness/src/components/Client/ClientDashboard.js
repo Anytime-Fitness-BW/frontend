@@ -1,9 +1,15 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 
 
 const ClientDashboard = () => {
+  const history = useHistory();
+
+  const onClick = event => {
+    event.preventDefault()
+    history.push('/dashboard/add')
+}
 
 
   return (
@@ -62,6 +68,7 @@ const ClientDashboard = () => {
           <p className='price'>Price: $45</p>
         </section>
 
+
         <section className='class-card'>
           <img className='class-img' src='https://i.stack.imgur.com/y9DpT.jpg' alt='placeholder.img' />
           <div className='mini-section-container'>
@@ -100,11 +107,24 @@ const ClientDashboard = () => {
           <p className='price'>Price: $80</p>
         </section>
       </div>
+      <div className='class-signup-buttons' onClick={onClick}>
+        <button className='signup-button'>SIGN UP</button>
+        <button className='signup-button'>SIGN UP</button>
+        <button className='signup-button'>SIGN UP</button>
+      </div>
+
       <div>
         {/* This is here so we can access the instructor dashboard until the auth code is hooked up */}
         <Link className='space' to="/dashboard/add">Clients</Link>
         <Link className='space' to="/dashboard/instructor">Instructors</Link>
       </div>
+
+      <nav>
+        <h1></h1>
+        <div className='client-nav-links'>
+          <Link to='/'>Log Out</Link>
+        </div>
+      </nav>
     </div>
   )
 }
