@@ -1,26 +1,22 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import AddClass from './AddClass'
+import { Link } from 'react-router-dom'
+
 
 
 const ClientDashboard = () => {
   
   
   return (
-    <Router>
-      <div>
-        <ul>
-          <li>
-            <Link to="/client/add">Find the class for you!</Link>
-          </li>
-        </ul>  
-      </div>
-      <div>
-      <Route path="/client/add">
-        <AddClass />
-      </Route>
-      </div>
-    </Router>
+    <div>
+      <ul>
+        <li>
+          <Link to="/dashboard/add">Clients</Link>
+        </li>
+        <li>
+          <Link to="/dashboard/instructor">Instructors</Link>
+        </li>
+      </ul>  
+    </div>
   )
 }
 

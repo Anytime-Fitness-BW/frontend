@@ -10,6 +10,11 @@ import InstructorSignUp from './components/createInstructorAccount/InstructorSig
 import { instructorSchema } from './components/createInstructorAccount/instructorFormSchema'
 import LoginForm from './components/login/loginForm'
 import { loginSchema } from './components/login/loginSchema'
+import ClientDashboard from './components/Client/ClientDashboard';
+import InstructorDashboard from './components/instructor/InstructorDashboard'
+import AddClass from './components/Client/AddClass'
+import CreateClass from './components/instructor/CreateClass'
+import MyClasses from './components/instructor/MyClasses'
 
 
 
@@ -218,8 +223,6 @@ useEffect(() => {
 
 
 
-
-
   return (
     <div className="App">
       <Route exact path='/'>
@@ -252,13 +255,21 @@ useEffect(() => {
           loginErrors = {loginFormErrors}
         />
       </Route>
-      <Route path='/dashboard'>
-        {/* this leads to the client dashboard after the sign up process will change to the appropriate endpoint when provided with that information */}
+      <Route exact path='/dashboard'>
+        <ClientDashboard/>
       </Route>
-      <Route path='/dashboard/instructor'>
-        {/* this leads to the client dashboard after the sign up process will change to the appropriate endpoint when provided with that information */}
+      <Route exact path="/dashboard/add">
+        <AddClass />
       </Route>
-
+      <Route exact path='/dashboard/instructor'>
+        <InstructorDashboard />
+      </Route>
+      <Route exact path="/instructor/create">
+        <CreateClass />
+      </Route>
+      <Route exact path="/instructor/classes">
+        <MyClasses />
+      </Route>
     </div>
   );
 }
