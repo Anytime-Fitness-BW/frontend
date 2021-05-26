@@ -47,17 +47,6 @@ nav {
 }
 
 /* Sign Up Forms Styling */
-#signUpForm {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: -0.2rem;
-  margin-left: 7rem;
-  margin-right: 7rem;
-  font-weight: 600;
-}
-
 .form-image {
   height: 10rem;
   width: 10rem;
@@ -103,30 +92,12 @@ nav {
   margin-left: 29.5rem;
 }
 
-.form-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
 
 .first-four-text-inputs {
   display: flex;
   flex-flow: row wrap;
   width: 25rem;
   margin-left: 1rem;
-}
-
-.text-inputs {
-  width: 300px;
-  margin-left: -5.25rem;
-}
-
-.checkbox{
-  display: flex;
-  flex-direction: row;
-  margin-left: -2rem;
-  margin-top: -1rem;
 }
 
 .checkbox-square {
@@ -138,13 +109,6 @@ nav {
   font-size: .75rem;
 }
 
-.bottom-text {
-  display: flex;
-  flex-direction: row;
-  margin-left: -2rem;
-  margin-top: .5rem;
-  font-size: .7rem;
-}
 
 .bottom-text-link {
   margin-top: .6rem;
@@ -152,9 +116,6 @@ nav {
   color: black;
 }
 
-.button{
-  margin-left: -1rem;
-}
 
 /* Login Form Styling */
 .login-image {
