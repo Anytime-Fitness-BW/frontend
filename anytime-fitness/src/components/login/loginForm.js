@@ -17,7 +17,12 @@ export default function LoginForm(props) {
     const onSubmit = event => {
         event.preventDefault()
         loginSubmit()
-        history.push('/dashboard')
+
+        if(loginValues.auth_code === ''){
+            return history.push('/dashboard')
+        } else{
+            return history.push('/dashboard/instructor')
+        }
     }
 
     const onChange = (event) => {

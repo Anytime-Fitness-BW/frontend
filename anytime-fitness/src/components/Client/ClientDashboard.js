@@ -102,11 +102,6 @@ const ClientDashboard = () => {
         <button className='signup-button'>SIGN UP FOR A CLASS TODAY</button>
       </div>
 
-      <div>
-        {/* This is here so we can access the instructor dashboard until the auth code is hooked up */}
-        <Link className='space' to="/dashboard/instructor">Instructors</Link>
-      </div>
-
       <nav>
         <h1></h1>
         <div className='client-nav-links'>
