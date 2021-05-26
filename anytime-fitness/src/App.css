@@ -345,6 +345,10 @@ nav {
   margin-right: 1rem;
 }
 
+.class-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(39, 17, 45, 0.1);
+}
+
 .class-img {
   width: 28rem;
   border-bottom: 1px solid black;
@@ -433,6 +437,11 @@ nav {
   text-decoration: underline;
 }
 
+.ac-middle-section {
+  margin-top: 4rem;
+  font-size: 1.4rem;
+}
+
 .ac-class-card {
   border: 1px solid black;
   width: 35rem;
@@ -441,6 +450,10 @@ nav {
   margin-left: 2rem;
   margin-right: 1rem;
   font-size: .9rem;
+}
+
+.ac-class-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(39, 17, 45, 0.1);
 }
 
 .ac-class-img {
@@ -481,9 +494,6 @@ nav {
 
 .register-button:hover {
   box-shadow: 0 8px 16px 0 rgba(39, 17, 45, 0.1);
-  -webkit-transform: scale(1.05) translate(0px, -4px);
-  -ms-transform: scale(1.05) translate(0px, -4px);
-  transform: scale(1.05) translate(0px, -4px);
   background-color: white;
 }
 

@@ -57,7 +57,29 @@ const AddClass = (props) => {
 
   return (
     <div>
-      <h1>Looking for a class?</h1>
+      <div className='header'>
+        <section className='search-container'>
+          <img className='search-image' src='https://cdn.iconscout.com/icon/free/png-256/search-1767866-1502119.png' alt='user.img' />
+          <label>
+            <input className='search' type='search' placeholder='Search' />
+          </label>
+        </section>
+        <section className='title'>
+          <h3>ANYWHERE FITNESS</h3>
+        </section>
+        <section className='user'>
+          <img className='user-image' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7wrKjpbjvQzLHlQfvKO8gsopOJBvbCEXe1A&usqp=CAU' alt='user.img' />
+          <h4 className='username'>Client Name</h4>
+        </section>
+        <section>
+          <img className='menu-image' src='https://cdn3.iconfinder.com/data/icons/mini-icon-set-general-office/91/General_-_Office_30-512.png' alt='user.img' />
+        </section>
+      </div>
+
+      <section className='ac-middle-section'>
+        <h1>Looking for a class?</h1>
+      </section>
+
       <form onSubmit={handleSubmit}>
         <h4 className='sort-by'>Sort By: </h4>
         <div className='filter-bar'>
