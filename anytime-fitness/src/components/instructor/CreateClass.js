@@ -31,13 +31,11 @@ const CreateClass = (props) => {
 
   const submitHandler = (e) => {
     e.preventDefault()
-    
-    
     axios
       .post('', formValues)
       .then(res=>{
         console.log("create post RES",res)
-        props.addClasses(formValues)
+        props.addClasses(res.data)
         push('/instructor/classes')
       })
       .catch(err=>{console.log("create post ERR", err)})

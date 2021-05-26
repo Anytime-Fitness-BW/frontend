@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
-const initialState = {
+const initialState = [{
   className: '',
   date: '',
   time: '',
@@ -12,7 +12,7 @@ const initialState = {
   price: '',
   attendees: '',
   maxSize: '',
-}
+}]
 
 const MyClasses = () => {
   const [classes, setClasses] = useState(initialState)
@@ -24,7 +24,7 @@ const MyClasses = () => {
       .get('')
       .then(res=>{
         console.log('MyClasses get RES', res)
-        
+        // setClasses(res.data)
       })
       .then(err=>{console.log('MyClasses get ERR', err)})
   }, [])
@@ -33,10 +33,14 @@ const MyClasses = () => {
 
   const editHandler = (e) => {
     e.preventDefault()
+    const id = classes.id
     axios
       .put('', classes)
       .then(res=>{
         console.log('MyClasses put RES', res)
+        // const editClass = classes.filter((aClass) => aClass.id !== id )
+        // editClass.push(classes)
+        // setClasses(editClass)
       })
       .catch(err=>{console.log('MyClasses put ERR', err)
       })
@@ -46,8 +50,12 @@ const MyClasses = () => {
   
   const deleteHandler = (e) => {
     axios
-      .put('', classes)
-      .then(res=>{console.log('MyClasses put RES', res)})
+      .delete('', classes)
+      .then(res=>{console.log(
+        'MyClasses put RES', res)
+        // const remainingClasses = classes.filter((aClass) => aClass.id !== Number(res.data))
+        // setClasses(remainingClasses)
+    })
       .catch(err=>{console.log('MyClasses put ERR', err)})
   }
 

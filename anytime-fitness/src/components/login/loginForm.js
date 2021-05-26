@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React from 'react'
 import { useHistory, Link } from "react-router-dom";
 
@@ -16,8 +17,18 @@ export default function LoginForm(props) {
 
     const onSubmit = event => {
         event.preventDefault()
-        loginSubmit()
-        history.push('/dashboard')
+        axios
+            .post('', loginValues)
+            .then(res => {
+                console.log("login post RES", res)
+                // localStorage.setItem("token", res.data.payload)
+                loginSubmit()
+                history.push('/dashboard')
+            })
+            .catch(err => {
+                console.log("login post ERR", err)
+            })
+        
     }
 
     const onChange = (event) => {
