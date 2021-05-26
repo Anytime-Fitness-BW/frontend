@@ -28,7 +28,7 @@ export default function LoginForm(props) {
 
 
     return (
-        <form  id='signUpForm' onSubmit={onSubmit}>
+        <form className='backgroundColor'onSubmit={onSubmit}>
             <nav>
                 <h1></h1>
                 <div className='nav-links'>
@@ -43,12 +43,16 @@ export default function LoginForm(props) {
                 />
                 <hr className='hr'/>
                 <h4> Sign In </h4>
-                <hr className='hr2'/>
+                <hr className='hr2' />
             </div>
 
-            <section>
+            <section className='form'>
+                <div className='login-text'>
+                    <p>Not Registered?</p>
+                    <Link className='bottom-text-link' to='/'>Click here</Link>
+                </div>
                 <label>
-                    <input 
+                    <input className='usernameInput'
                         value={loginValues.username_or_email}
                         onChange={onChange}
                         name='username_or_email'
@@ -56,9 +60,9 @@ export default function LoginForm(props) {
                         placeholder='Username or Email'
                         size='35'
                     />
-                </label><br/><br/>
+                </label>
                 <label>
-                    <input 
+                    <input className='passwordInput'
                         value={loginValues.password}
                         onChange={onChange}
                         name='password'
@@ -66,9 +70,9 @@ export default function LoginForm(props) {
                         placeholder='Password'
                         size='35'
                     />
-                </label><br/><br/>
+                </label>
                 <label>
-                    <input 
+                    <input  className='authCodeInput'
                         value={loginValues.auth_code}
                         onChange={onChange}
                         name='auth_code'
@@ -76,7 +80,13 @@ export default function LoginForm(props) {
                         placeholder='Authorization Code (opt)'
                         size='35'
                     />
-                </label><br/><br/>
+                </label>
+                <div>
+                    <button className='login-button' disabled={loginDisabled} id='submit-button'>
+                        SIGN IN
+                    </button>
+                </div>
+                
             </section>
 
             <section className='loginCheckbox'>
@@ -90,19 +100,15 @@ export default function LoginForm(props) {
                     />
                 </label>
                 <p className='login-checkbox-text'>Remember me</p>
-                <p className='white-space'>ignore this space p</p>
+                <p className='white-space'></p>
                 <Link className='login-text-link' to='/'>Forget password?</Link>
             </section>
 
-            <section>
-                <button className='login-button' disabled={loginDisabled} id='submit-button'>
+            <section className='bottomPage backgroundColor'>
+                {/* <button className='login-button' disabled={loginDisabled} id='submit-button'>
                         SIGN IN
-                </button>
-                <div className='login-text'>
-                    <p>Not Registered?</p>
-                    <Link className='bottom-text-link' to='/'>Click here</Link>
-                </div>
-                <div>
+                </button> */}
+                <div >
                     <div>{loginErrors.username_or_email}</div>
                     <div>{loginErrors.password}</div>
                     <div>{loginErrors.auth_code}</div>
