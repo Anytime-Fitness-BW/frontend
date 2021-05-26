@@ -21,7 +21,7 @@ const ClientDashboard = () => {
             <input className='search' type='search' placeholder='Search' />
           </label>
         </section>
-        <section className='title'>
+        <section className='client-title'>
           <h3>ANYWHERE FITNESS</h3>
         </section>
         <section className='user'>
