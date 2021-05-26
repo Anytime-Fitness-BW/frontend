@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import { Link, useHistory } from 'react-router-dom'
 
 const initialState = {
   className: '',
@@ -83,7 +84,7 @@ const MyClasses = () => {
       <section className='middle-section'>
         <h1>My Classes</h1>
       </section>
-  
+
       <form>
         <h4 className='sort-by'>Sort By: </h4>
         <div className='filter-bar'>
@@ -160,8 +161,77 @@ const MyClasses = () => {
         </div>
         <button className='signup-button'>Search</button>
       </form>
-      <button onClick={editHandler}>Edit</button>
-      <button onClick={deleteHandler}>Delete</button>
+
+      <div className='mc-classes-container'>
+        <section className='mc-class-card'>
+          <img className='mc-class-img' src='https://i.stack.imgur.com/y9DpT.jpg' alt='placeholder.img' />
+          <div className='mc-mini-section-container'>
+            <div className='mc-mini-section'>
+              <p className='mc-class-info'>Class Name: Power Hour</p>
+              <p className='mc-class-info'>Location: Tampa, FL</p>
+              <p className='mc-class-info'>Date: June 13, 2021</p>
+              <p className='mc-class-info'>Time: 4:30pm to 6:00pm</p>
+              <button className='button-1' onClick={editHandler}>Edit</button>
+            </div>
+            <div className='mc-mini-section-2'>
+              <p className='mc-class-info'>Duration: 1 months</p>
+              <p className='mc-class-info'>Level: Intermediate</p>
+              <p className='mc-class-info'>Type: Cycling</p>
+              <p className='mc-class-info'>Price: $45</p>
+              <button className='button-2' onClick={deleteHandler}>Delete</button>
+            </div>
+          </div>
+        </section>
+
+
+
+        <section className='mc-class-card'>
+          <img className='mc-class-img' src='https://i.stack.imgur.com/y9DpT.jpg' alt='placeholder.img' />
+          <div className='mc-mini-section-container'>
+            <div className='mc-mini-section'>
+              <p className='mc-class-info'>Class Name: Wishful Shrinking</p>
+              <p className='mc-class-info'>Location: Orlando, FL</p>
+              <p className='mc-class-info'>Date: June 6, 2021</p>
+              <p className='mc-class-info'>Time: 7:30pm to 9:00pm</p>
+              <button className='button-1' onClick={editHandler}>Edit</button>
+            </div>
+            <div className='mc-mini-section-2'>
+              <p className='mc-class-info'>Duration: 2 months</p>
+              <p className='mc-class-info'>Level: Beginner</p>
+              <p className='mc-class-info'>Type: Circuit Training</p>
+              <p className='mc-class-info'>Price: $45</p>
+              <button className='button-2' onClick={deleteHandler}>Delete</button>
+            </div>
+          </div>
+        </section>
+
+        <section className='mc-class-card'>
+          <img className='mc-class-img' src='https://i.stack.imgur.com/y9DpT.jpg' alt='placeholder.img' />
+          <div className='mc-mini-section-container'>
+            <div className='mc-mini-section'>
+              <p className='mc-class-info'>Class Name: Fab, Fit, and Fun</p>
+              <p className='mc-class-info'>Location: Miami, FL</p>
+              <p className='mc-class-info'>Date: June 24, 2021</p>
+              <p className='mc-class-info'>Time: 1:30pm to 3:00pm</p>
+              <button className='button-1' onClick={editHandler}>Edit</button>
+            </div>
+            <div className='mc-mini-section-2'>
+              <p className='mc-class-info'>Duration: 4 months</p>
+              <p className='mc-class-info'>Level: Expert</p>
+              <p className='mc-class-info'>Type: Bootcamp</p>
+              <p className='mc-class-info'>Price: $45</p>
+              <button className='button-2' onClick={deleteHandler}>Delete</button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <nav>
+        <h1></h1>
+        <div className='client-nav-links'>
+          <Link to='/dashboard/instructor'>Back to Dashboard</Link>
+        </div>
+      </nav>
     </div>
   )
 }

@@ -605,6 +605,79 @@ nav {
   margin-left: 3.3rem;
 }
 
+/* My Classes - Instructor Dashboard Styling */
+.mc-classes-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 16rem;
+  margin-top: -2rem;
+}
+
+.mc-class-card {
+  border: 1px solid black;
+  width: 60rem;
+  height: 20rem;
+  margin-top: 3rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.mc-class-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(39, 17, 45, 0.1);
+}
+
+.mc-class-img {
+  width: 28rem;
+  height: 15rem;
+  margin-left: 1rem;
+  margin-top: 2.5rem;
+}
+
+.mc-mini-section-container {
+  display: flex;
+  flex-direction: row;
+  text-decoration: underline;
+  justify-content: center;
+  margin-top: 1.5rem;
+  border: 1px solid black;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 60rem;
+  height: 15rem;
+  margin-top: 2.5rem;
+}
+
+.mc-mini-section {
+  display: flex;
+  flex-direction: column;
+  font-size: medium;
+}
+
+.mc-mini-section-2 {
+  display: flex;
+  flex-direction: column;
+  font-size: medium;
+}
+
+.mc-class-info {
+ text-align: left;
+ margin-left: 1rem;
+}
+
+.button-1 {
+  width: 5rem;
+  margin-top: .7rem;
+}
+
+.button-2 {
+  width: 5rem;
+  margin-left: 9rem;
+  margin-top: .7rem;
+}
+
 
 
 
