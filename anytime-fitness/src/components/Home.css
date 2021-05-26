@@ -16,54 +16,74 @@
     padding: 2%;
     cursor: pointer;
     color: black;
-  }
-  .logo {
+}
+
+.nav:hover {
+    box-shadow: 0 8px 16px 0 rgba(39, 17, 45, 0.1);
+}
+
+.logo {
     font-size: 1.5em;
     display: inline;
     font-weight: bold;
-  }
-  .nav ul {
+    margin-left: -40rem;
+}
+
+.nav ul {
     list-style: none;
     float: right;
     font-size: 0.8em;
     margin: 0;
     text-transform: uppercase;
     margin-top: 5px;
-  }
-  .nav ul li {
+}
+
+.nav ul li {
     display: inline;
     padding: 0 30px;
     letter-spacing: 1px;
-  }
+}
   
-  .hero {
+.hero {
     display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
     padding: 100px 0;
     flex-wrap: wrap;
-  }
-  .title {
-    font-size: 7em;
+}
+
+.title {
+    font-size: 6rem;
     text-align: center;
     width: 100%;
     font-family: serif;
     font-weight: bold;
-  }
-  .title::before {
-    content: "Beats to your rythm";
+    text-shadow: .1rem .1rem rgba(173, 161, 161, 0.466);
+    margin-top: 1.2rem;
+}
+
+.title::before {
+    content: "find your perfect class today";
     font-size: 10px;
     letter-spacing: 1.8px;
     font-weight: bold;
     text-align: center;
-    color: #eee;
+    color: rgb(202, 72, 72);
     display: block;
     text-transform: uppercase;
     margin-bottom: -5px;
-  }
-  .button {
-    background: #ff4c54;
+    text-shadow: none;
+}
+
+.home-buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2.5rem;
+}
+  
+.home-button1 {
+    background: #f3d31e;
     padding: 18px 29px;
     border-radius: 10px;
     text-transform: uppercase;
@@ -71,93 +91,34 @@
     font-size: 12px;
     margin-top: 3%;
     cursor: pointer;
-  }
-  i {
-    color: black;
-  }
-  .main {
-    position: absolute;
-    bottom: 0;
-    margin: 0 2%;
-    width: 95%;
-    background: white;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 1.4% 0;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-  
-  .main input {
-    border: none;
-    border-bottom: 2px solid #ff4c54;
-    font-size: 1.4em;
-    font-weight: bold;
-  }
-  .date {
-    padding: 5px;
-    font-weight: bold;
-    color: gray;
-    border: 1px solid #828282;
-  }
-  .date span {
-    margin: 5px;
-  }
-  .date span:first-of-type {
-    border-right: 1px solid #828282;
-  }
-  
-  .go {
-    background: lightgreen;
-    padding: 10px;
-    border-radius: 50%;
-    position: absolute;
-    right: -17px;
-    transition: all 0.5s ease-in-out;
-    transform: rotate(12deg);
-    color: #eee;
-    font-size: 1.5em;
-  }
+    margin-right: .5rem;
+}
 
+.home-button1:hover {
+    box-shadow: 0 8px 16px 0 rgba(39, 17, 45, 0.1);
+}
 
-/* .home-wrapper {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-  }
-  
-  .home-image {
-    width: 50rem;
-    min-width: 1032px;
-    height: 43rem;
-    border-radius: 2rem;
-  }
-  
-  .buttons-and-link {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: -10rem;
-  }
-  
-  .clientButton {
-    margin: 1rem;
-    width: 10rem;
-    height: 2rem;
-  }
-  
-  .clientButton:hover {
-    box-shadow: 0 8px 16px 0 rgba(124, 124, 76, 0.986);
-  }
-  
-  .instructorButton {
-    margin: 1rem;
-    width: 12rem;
-    height: 2rem;
-  }
+.home-button2 {
+    background: #f3d31e;
+    padding: 18px 29px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 3%;
+    cursor: pointer;
+    margin-left: .5rem;
+}
 
-  .instructorButton:hover {
-    box-shadow: 0 8px 16px 0 rgba(124, 124, 76, 0.986);
-  } */
+.home-button2:hover {
+    box-shadow: 0 8px 16px 0 rgba(39, 17, 45, 0.1);
+}
+
+.home-link {
+    margin-top: -4rem;
+}
+
+.home-link:hover {
+    text-shadow: .1rem .1rem rgba(173, 161, 161, 0.466);
+}
+
