@@ -46,58 +46,6 @@ nav {
   border-bottom: 1px solid #1c5d76;
 }
 
-
-/* Home page Styling */
-
-.home-wrapper {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-}
-
-.home-image {
-  width: 50rem;
-  min-width: 1032px;
-  height: 43rem;
-  border-radius: 2rem;
-}
-
-.buttons-and-link {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: -10rem;
-}
-
-.clientButton {
-  margin: 1rem;
-  width: 10rem;
-  height: 2rem;
-}
-
-.clientButton:hover {
-  box-shadow: 0 8px 16px 0 rgba(39, 17, 45, 0.1);
-  -webkit-transform: scale(1.05) translate(0px, -4px);
-  -ms-transform: scale(1.05) translate(0px, -4px);
-  transform: scale(1.05) translate(0px, -4px);
-  background-color: white;
-}
-
-.instructorButton {
-  margin: 1rem;
-  width: 12rem;
-  height: 2rem;
-}
-
-.instructorButton:hover {
-  box-shadow: 0 8px 16px 0 rgba(39, 17, 45, 0.1);
-  -webkit-transform: scale(1.05) translate(0px, -4px);
-  -ms-transform: scale(1.05) translate(0px, -4px);
-  transform: scale(1.05) translate(0px, -4px);
-  background-color: white;
-}
-
 /* Sign Up Forms Styling */
 #signUpForm {
   display: flex;
@@ -677,7 +625,3 @@ nav {
   margin-left: 9rem;
   margin-top: .7rem;
 }
-
-
-
-
