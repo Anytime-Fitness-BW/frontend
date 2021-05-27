@@ -15,6 +15,7 @@ import InstructorDashboard from './components/instructor/InstructorDashboard'
 import AddClass from './components/Client/AddClass'
 import CreateClass from './components/instructor/CreateClass'
 import MyClasses from './components/instructor/MyClasses'
+import LogoutConfirmation from './components/LogoutConfirmation';
 
 
 
@@ -273,7 +274,7 @@ useEffect(() => {
         <MyClasses />
       </Route>
       <Route exact path="/logout">
-        {/* Logout component will go here */}
+        <LogoutConfirmation/>
       </Route>
     </div>
   );
