@@ -44,7 +44,7 @@ const CreateClass = (props) => {
   }
 
   return (
-    <div>
+    <div className='background-img'>
       <div className='header'>
         <section className='search-container'>
           <img className='search-image' src='https://cdn.iconscout.com/icon/free/png-256/search-1767866-1502119.png' alt='user.img' />

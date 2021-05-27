@@ -56,7 +56,7 @@ const AddClass = (props) => {
   }
 
   return (
-    <div>
+    <div className='background-img'>
       <div className='header'>
         <section className='search-container'>
           <img className='search-image' src='https://cdn.iconscout.com/icon/free/png-256/search-1767866-1502119.png' alt='user.img' />
@@ -91,6 +91,7 @@ const AddClass = (props) => {
               value={classes.className}
               onChange={changeHandler}
               placeholder="Class Name"
+              style={{backgroundColor: 'lightgray'}}
             />
           </label>
           <label>
@@ -101,6 +102,7 @@ const AddClass = (props) => {
               value={classes.date}
               onChange={changeHandler}
               placeholder="Date"
+              style={{backgroundColor: 'lightgray'}}
             />
           </label>
           <label>
@@ -111,6 +113,7 @@ const AddClass = (props) => {
               value={classes.time}
               onChange={changeHandler}
               placeholder="Time"
+              style={{backgroundColor: 'lightgray'}}
             />
           </label>
           <label>
@@ -121,6 +124,7 @@ const AddClass = (props) => {
               value={classes.duration}
               onChange={changeHandler}
               placeholder="Duration"
+              style={{backgroundColor: 'lightgray'}}
             />
           </label>
           <label>
@@ -131,6 +135,7 @@ const AddClass = (props) => {
               value={classes.type}
               onChange={changeHandler}
               placeholder="Type"
+              style={{backgroundColor: 'lightgray'}}
             />
           </label>
           <label>
@@ -141,6 +146,7 @@ const AddClass = (props) => {
               value={classes.location}
               onChange={changeHandler}
               placeholder="Location"
+              style={{backgroundColor: 'lightgray'}}
             />
           </label>
           <label>
@@ -151,15 +157,16 @@ const AddClass = (props) => {
               value={classes.intensity}
               onChange={changeHandler}
               placeholder="Intensity Level"
+              style={{backgroundColor: 'lightgray'}}
             />
           </label>
         </div>
-        <button className='signup-button'>Search</button>
+        <button className='filter-button'>Search</button>
       </form>
 
       <div className='classes-container'>
         <section className='ac-class-card'>
-          <img className='ac-class-img' src='https://i.stack.imgur.com/y9DpT.jpg' alt='placeholder.img' />
+          <img className='ac-class-img' src='https://images.unsplash.com/photo-1606013818151-2df835e27c95?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTl8fGd5bXxlbnwwfDB8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' alt='placeholder.img' />
           <div className='ac-mini-section-container'>
             <div className='ac-mini-section'>
               <p className='ac-class-info'>Class Name: Power Hour</p>
@@ -172,7 +179,7 @@ const AddClass = (props) => {
           <p className='price'>Price: $30</p>
         </section>
       </div>
-      <button className='register-button'>REGISTER TODAY</button>
+      <button className='register-button' style={{marginLeft: '40.5rem'}}>REGISTER TODAY</button>
       <nav>
         <h1></h1>
         <div className='client-nav-links'>

@@ -23,7 +23,7 @@ function HomePage() {
                         <li>Download App</li>
                         <li>About</li>
                         <li>Contact</li>
-                        <li><Link to='/login' style={{  textDecoration: 'none' }}>Sign in</Link></li>
+                        <li><Link to='/login' style={{ color: 'black', textDecoration: 'none' }}>Sign in</Link></li>
                     </ul>
                 </div>
             </div>
