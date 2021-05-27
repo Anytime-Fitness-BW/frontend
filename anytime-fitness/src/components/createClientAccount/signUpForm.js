@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useHistory, Link } from "react-router-dom";
+import axiosWithAuth from '../../utils/axiosWithAuth';
+import axios from 'axios'
 
-
+const initialState = [{
+    id: '',
+    firstname: '',
+    lastname: '',
+    city: '',
+    zipcode: '',
+    email:'',
+    username: '',
+    password: ''
+}]
 
 export default function ClientSignUpForm(props) {
+    const [register, setRegister] = useState(initialState)
     const {
         values,
         submit,
@@ -16,8 +28,17 @@ export default function ClientSignUpForm(props) {
 
     const onSubmit = event => {
         event.preventDefault()
-        submit()
-        history.push('/dashboard')
+        axios
+            .post('https://anytime-fitness-bw.herokuapp.com/api/auth/register', register)
+            .then(res=>{
+                console.log("client post RES", res)
+                // setRegister(res.data)
+                // submit()
+                history.push('/dashboard')
+            })
+            .catch(err=>{
+                console.log({err})
+            })   
     }
 
     const onChange = (event) => {

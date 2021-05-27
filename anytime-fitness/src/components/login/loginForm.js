@@ -18,10 +18,10 @@ export default function LoginForm(props) {
     const onSubmit = event => {
         event.preventDefault()
         axios
-            .post('', loginValues)
+            .post('/api/auth/login', loginValues)
             .then(res => {
                 console.log("login post RES", res)
-                // localStorage.setItem("token", res.data.payload)
+                localStorage.setItem("token", res.data.payload)
                 loginSubmit()
                 history.push('/dashboard')
             })

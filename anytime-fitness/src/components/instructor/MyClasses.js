@@ -1,17 +1,21 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import axiosWithAuth from '../../utils/axiosWithAuth'
 
 const initialState = [{
-  className: '',
+  id: '',
+  class_name: '',
   date: '',
   time: '',
   duration: '',
-  type: '',
   location: '',
-  intensity: '',
+  intensity_level: '',
+  registered_attendees: '',
+  max_class_size: '',
+  first_name: '',
+  last_name: '',
   price: '',
-  attendees: '',
-  maxSize: '',
+  description: '',
 }]
 
 const MyClasses = () => {
@@ -20,11 +24,11 @@ const MyClasses = () => {
   // to access the classes available upon mount
   
   useEffect(()=>{
-    axios
-      .get('')
+    axiosWithAuth()
+      .get('/api/instructor/class')
       .then(res=>{
         console.log('MyClasses get RES', res)
-        // setClasses(res.data)
+        setClasses(res.data)
       })
       .then(err=>{console.log('MyClasses get ERR', err)})
   }, [])
@@ -34,8 +38,8 @@ const MyClasses = () => {
   const editHandler = (e) => {
     e.preventDefault()
     const id = classes.id
-    axios
-      .put('', classes)
+    axiosWithAuth()
+      .put(`/api/instructor/class${id}`, classes)
       .then(res=>{
         console.log('MyClasses put RES', res)
         // const editClass = classes.filter((aClass) => aClass.id !== id )
@@ -48,9 +52,9 @@ const MyClasses = () => {
 
   // to delete a class
   
-  const deleteHandler = (e) => {
-    axios
-      .delete('', classes)
+  const deleteHandler = (delClass) => {
+    axiosWithAuth()
+      .delete(`/api/instructor/class${delClass}`, classes)
       .then(res=>{console.log(
         'MyClasses put RES', res)
         // const remainingClasses = classes.filter((aClass) => aClass.id !== Number(res.data))
@@ -69,6 +73,23 @@ const changeHandler = (e) => {
   return (
     <div>
       <h1>My Classes</h1>
+      {classes.map((aClass)=> {
+        return<div> 
+          <p>{aClass.id}</p>
+          <p>{aClass.class_name}</p>
+          <p>{aClass.date}</p>
+          <p>{aClass.time}</p>
+          <p>{aClass.duration}</p>
+          <p>{aClass.location}</p>
+          <p>{aClass.intensity_level}</p>
+          <p>{aClass.registered_attendees}</p>
+          <p>{aClass.max_class_size}</p>
+          <p>{aClass.first_name}</p>
+          <p>{aClass.last_name}</p>
+          <p>{aClass.price}</p>
+          <p>{aClass.description}</p>
+         </div>
+      })}
       <form>
       <label>
           <input 

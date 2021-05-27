@@ -19,7 +19,7 @@ export const schema = yup.object().shape({
     email: yup 
         .string()
         .email('Must Be a Valid Email!')
-        .required('Email is Rrequired'),
+        .required('Email is Required'),
     password: yup
         .string()
         .min(6, 'Must be at least 6 characters!')

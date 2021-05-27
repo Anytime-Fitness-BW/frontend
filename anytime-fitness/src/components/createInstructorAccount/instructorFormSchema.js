@@ -16,10 +16,10 @@ export const instructorSchema = yup.object().shape({
     username: yup
         .string()
         .required('Must Choose a Username'),
-    email: yup 
-        .string()
-        .email('Must Be a Valid Email!')
-        .required('Email is Rrequired'),
+    // email: yup 
+    //     .string()
+    //     .email('Must Be a Valid Email!')
+    //     .required('Email is Rrequired'),
     password: yup
         .string()
         .min(6, 'Must be at least 6 characters!')

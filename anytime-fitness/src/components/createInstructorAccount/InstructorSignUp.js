@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useHistory, Link } from "react-router-dom";
+import axiosWithAuth from '../../utils/axiosWithAuth';
 
-
+const initialState = [{
+    id: '',
+    firstname: '',
+    lastname: '',
+    city: '',
+    zipcode: '',
+    username: '',
+    password: '',
+    authcode: ''
+}]
 
 function InstructorSignUp(props) {
+    const [register, setRegister] = useState(initialState)
     const {
         instructorValues,
         instructorChange,
@@ -16,8 +27,17 @@ function InstructorSignUp(props) {
 
     const onSubmit = event => {
         event.preventDefault()
-        instructorSubmit()
-        history.push('/dashboard/instructor')
+        axiosWithAuth()
+            .post('/api/instructor/class', register)
+            .then(res=>{
+                console.log("inSign post RES", res)
+                setRegister(res.data)
+                instructorSubmit()
+                history.push('/dashboard/instructor')
+            })
+            .catch(err=>{
+                console.log("inSign post ERR", err)
+            })   
     }
 
     const onChange = (event) => {
@@ -25,6 +45,7 @@ function InstructorSignUp(props) {
         const inputValue = type === "checkbox" ? checked : value;
         instructorChange(name, inputValue);
     }
+
 
 
 
@@ -97,7 +118,7 @@ function InstructorSignUp(props) {
                         size='47'
                     />
                 </label><br/><br/>
-                <label>
+                {/* <label>
                     <input 
                         value={instructorValues.email}
                         onChange={onChange}
@@ -106,7 +127,7 @@ function InstructorSignUp(props) {
                         placeholder='Email'
                         size='47'
                     />
-                </label><br/><br/>
+                </label><br/><br/> */}
                 <label>
                     <input 
                         value={instructorValues.password}
