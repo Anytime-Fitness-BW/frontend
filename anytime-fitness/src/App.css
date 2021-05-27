@@ -122,7 +122,7 @@ nav {
 .login-image {
   height: 8rem;
   width: 8rem;
-  margin-top: 2rem;
+  margin-top: 2.2rem;
   margin-bottom: -.7rem;
 }
 
@@ -138,6 +138,14 @@ nav {
 .form {
   display: flex;
   flex-direction: column;
+  border: 1px solid black;
+  width: 25rem;
+  margin-left: 35.5rem;
+  background: rgb(226, 193, 149);
+  text-align: center;
+  border-radius: 1rem;
+  opacity: 80%;
+  margin-top: 5.3rem;
 }
 
 .login-text-link {
@@ -170,8 +178,6 @@ nav {
   
 }
 
-
-
 .usernameInput {
   padding-left: 70px;
   padding-top: 20px;
@@ -197,7 +203,7 @@ nav {
   padding-left: 70px;
   padding-top: 20px;
   padding-bottom: 20px;
-  $font-family:   "Roboto";
+  font-family:   "Roboto";
   font-size: 15px;
 
 }
@@ -214,61 +220,18 @@ nav {
   border: solid black 1px;
 } 
 
+.login-button:hover {
+  background-color: rgb(112, 106, 54);
+}
+
 .backgroundColor{
-  background: linear-gradient(45deg, #49D49D 10%, #A2C7E5 90%);
+  background-image: url(https://images.pexels.com/photos/3758147/pexels-photo-3758147.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940); 
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.bottomPage {
-  padding-top: 30px;
-  padding-bottom: 100%;
-}
-/* #49D49D
-#A2C7E5  */
-
-/* .login-image {
-  height: 8rem;
-  width: 8rem;
-  margin-top: 2rem;
-  margin-bottom: -.7rem;
-}
-
-.loginCheckbox {
-  display: flex;
-  flex-direction: row;
-  margin-top: -.5rem;
-  justify-content: center;
-}
-
-.login-checkbox-text {
-  font-size: .65rem;
-  margin-top: .8rem;
-}
-
-.login-text {
-  display: flex;
-  flex-direction: row;
-  font-size: .65rem;
-  margin-top: .8rem;
-  justify-content: center;
-}
-
-.login-text-link {
-  margin-top: .8rem;
-  margin-left: .4rem;
-  color: black;
-  font-size: .60rem;
-  display: flex;
-  justify-content: flex-end;
-  justify-content: space-between;
-}
-
-.login-button{
-  margin-top: 1rem;
-  width: 15rem;
-}
-
-.space{
-  margin-left: 1rem;
+.space {
+  color: transparent;
 }
 
 /* Client Dashboard Styling */

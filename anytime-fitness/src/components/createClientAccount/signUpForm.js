@@ -30,7 +30,7 @@ export default function ClientSignUpForm(props) {
 
 
     return (
-        <div className='form'>
+        <div className='form1'>
             <form id='signUpForm' onSubmit={onSubmit}>
                 <nav>
                     <h1></h1>
@@ -39,7 +39,7 @@ export default function ClientSignUpForm(props) {
                     </div>
                 </nav>
                 <div className='form-container'>
-                <h4 className='signup-title' style={{ marginLeft: '.01rem', fontSize: '1.3rem'}}> Create an Account </h4>
+                <h4 className='signup-title mini-header' style={{ marginLeft: '.01rem', fontSize: '1.3rem'}}> Create an Account </h4>
                     <section className='first-four-text-inputs'>
                         <div className='first-two-text-inputs'>
                             <label>

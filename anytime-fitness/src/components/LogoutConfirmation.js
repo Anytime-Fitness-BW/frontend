@@ -5,6 +5,10 @@ function LogoutConfirmation (){
         
     }
 
+    const routeToHomePage = () => {
+        history.push('/')
+    }
+
     return(
         <div>
             <h2> Are you sure you want to log out?</h2>

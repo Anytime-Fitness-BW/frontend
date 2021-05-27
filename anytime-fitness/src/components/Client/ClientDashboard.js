@@ -105,7 +105,7 @@ const ClientDashboard = () => {
       <nav>
         <h1></h1>
         <div className='client-nav-links'>
-          <Link to='/'>Log Out</Link>
+          <Link to='/logout'>Log Out</Link>
         </div>
       </nav>
     </div>

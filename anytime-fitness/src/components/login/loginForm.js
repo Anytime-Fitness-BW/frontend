@@ -18,9 +18,9 @@ export default function LoginForm(props) {
         event.preventDefault()
         loginSubmit()
 
-        if(loginValues.auth_code === ''){
+        if (loginValues.auth_code === '') {
             return history.push('/dashboard')
-        } else{
+        } else {
             return history.push('/dashboard/instructor')
         }
     }
@@ -33,25 +33,25 @@ export default function LoginForm(props) {
 
 
     return (
-        <form className='backgroundColor'onSubmit={onSubmit}>
+        <form className='backgroundColor' onSubmit={onSubmit}>
             <nav>
                 <h1></h1>
                 <div className='nav-links'>
-                    <Link to='/'>Home</Link>
+                    <Link to='/' style={{ textDecoration: 'underline' }}>Home</Link>
                 </div>
             </nav>
-            <div>
-                <img
-                    className='login-image'
-                    src='https://pic.onlinewebfonts.com/svg/img_401900.png'
-                    alt='user.img'
-                />
-                <hr className='hr'/>
-                <h4> Sign In </h4>
-                <hr className='hr2' />
-            </div>
 
             <section className='form'>
+                <div>
+                    <img
+                        className='login-image'
+                        src='https://pic.onlinewebfonts.com/svg/img_401900.png'
+                        alt='user.img'
+                    />
+                    <hr className='hr' />
+                    <h4> Sign In </h4>
+                    <hr className='hr2' />
+                </div>
                 <div className='login-text'>
                     <p>Not Registered?</p>
                     <Link className='bottom-text-link' to='/'>Click here</Link>
@@ -77,7 +77,7 @@ export default function LoginForm(props) {
                     />
                 </label>
                 <label>
-                    <input  className='authCodeInput'
+                    <input className='authCodeInput'
                         value={loginValues.auth_code}
                         onChange={onChange}
                         name='auth_code'
@@ -91,35 +91,36 @@ export default function LoginForm(props) {
                         SIGN IN
                     </button>
                 </div>
-                
+
+                <section className='loginCheckbox'>
+                    <label>
+                        <input
+                            className='checkbox-square'
+                            type='checkbox'
+                            checked={loginValues.remember_me}
+                            name='remember_me'
+                            onChange={onChange}
+                        />
+                    </label>
+                    <p className='login-checkbox-text'>Remember me</p>
+                    <p className='white-space'></p>
+
+                    <Link className='login-text-link' to='/'>Forget password?</Link>
+                </section>
             </section>
 
-            <section className='loginCheckbox'>
-                <label>
-                    <input 
-                        className='checkbox-square'
-                        type='checkbox'
-                        checked={loginValues.remember_me}
-                        name='remember_me'
-                        onChange={onChange}
-                    />
-                </label>
-                <p className='login-checkbox-text'>Remember me</p>
-                <p className='white-space'></p>
-
-                <Link className='login-text-link' to='/'>Forget password?</Link>
-            </section>
-
-            <section className='bottomPage backgroundColor'>
-                {/* <button className='login-button' disabled={loginDisabled} id='submit-button'>
-                        SIGN IN
-                </button> */}
+            <section>
                 <div >
                     <div>{loginErrors.username_or_email}</div>
                     <div>{loginErrors.password}</div>
                     <div>{loginErrors.auth_code}</div>
                 </div>
             </section>
+            <div className='space'>
+                <div>space</div>
+                <div>space</div>
+                <div>space</div>
+            </div>
         </form>
     )
 }
