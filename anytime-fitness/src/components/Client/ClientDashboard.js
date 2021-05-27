@@ -13,7 +13,7 @@ const ClientDashboard = () => {
 
 
   return (
-    <div>
+    <div className='background-img'>
       <div className='header'>
         <section className='search-container'>
           <img className='search-image' src='https://cdn.iconscout.com/icon/free/png-256/search-1767866-1502119.png' alt='user.img' />
@@ -39,7 +39,7 @@ const ClientDashboard = () => {
 
       <div className='classes-container'>
         <section className='class-card'>
-          <img className='class-img' src='https://i.stack.imgur.com/y9DpT.jpg' alt='placeholder.img' />
+          <img className='class-img' src='https://images.pexels.com/photos/864939/pexels-photo-864939.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' alt='class.img' />
           <div className='mini-section-container'>
             <div className='mini-section'>
               <p className='class-info'>Class Name: Wishful Shrinking</p>
@@ -59,7 +59,7 @@ const ClientDashboard = () => {
 
 
         <section className='class-card'>
-          <img className='class-img' src='https://i.stack.imgur.com/y9DpT.jpg' alt='placeholder.img' />
+          <img className='class-img' src='https://images.pexels.com/photos/703014/pexels-photo-703014.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' alt='weight.img' />
           <div className='mini-section-container'>
             <div className='mini-section'>
               <p className='class-info'>Class Name: Power Hour</p>
@@ -70,7 +70,7 @@ const ClientDashboard = () => {
             <div className='mini-section-2'>
               <p className='class-info'>Duration: 1 months</p>
               <p className='class-info'>Level: Intermediate</p>
-              <p className='class-info'>Type: Cycling</p>
+              <p className='class-info'>Type: Weight Lifting</p>
               <p className='class-info'>Instructor: Alison Slate</p>
             </div>
           </div>
@@ -78,7 +78,7 @@ const ClientDashboard = () => {
         </section>
 
         <section className='class-card'>
-          <img className='class-img' src='https://i.stack.imgur.com/y9DpT.jpg' alt='placeholder.img' />
+          <img className='class-img' src='https://images.pexels.com/photos/3755440/pexels-photo-3755440.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' alt='camp.img' />
           <div className='mini-section-container'>
             <div className='mini-section'>
               <p className='class-info'>Class Name: Fab, Fit, and Fun</p>

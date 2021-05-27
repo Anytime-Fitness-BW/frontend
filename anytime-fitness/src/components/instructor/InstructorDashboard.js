@@ -16,7 +16,7 @@ const InstructorDashboard = () => {
   }
 
   return (
-    <div>
+    <div className='background-img'>
       <div className='header'>
         <section className='search-container'>
           <img className='search-image' src='https://cdn.iconscout.com/icon/free/png-256/search-1767866-1502119.png' alt='user.img' />
@@ -41,8 +41,8 @@ const InstructorDashboard = () => {
       </section>
 
       <div className='dashboard-buttons'>
-        <button className='button1' onClick={onClick}>Create a Class</button>
-        <button className='button2' onClick={onClick2}>My Classes</button>
+        <button className='button1' onClick={onClick} style={{ fontSize: '1.7rem' }}>Create a Class</button>
+        <button className='button2' onClick={onClick2} style={{ fontSize: '1.7rem' }}>My Classes</button>
       </div>
 
       <nav>
