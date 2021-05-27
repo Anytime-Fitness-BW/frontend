@@ -1,0 +1,159 @@
+.form{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: url(https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);; 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#signUpForm {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -0.2rem;
+    margin-left: 7rem;
+    margin-right: 7rem;
+    font-weight: 600;
+  }
+
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid darkgray;
+    width: 30rem;
+    margin-left: 27rem;
+    margin-top: 1.7rem;
+    background: darkgray;
+    text-align: center;
+    border-radius: 1.5rem;
+    opacity: 80%;
+  }
+
+  .form-container:hover {
+    box-shadow: 0 8px 16px 0 rgb(228, 183, 36);
+}
+
+.space {
+    color: transparent;
+}
+
+   
+h4 {
+    color: rgb(255, 199, 56);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-shadow: .01rem .1rem black;
+}
+
+.first-four-text-inputs {
+    display: flex;
+    flex-flow: row wrap;
+    width: 25rem;
+    margin-left: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.text-inputs {
+  width: 300px;
+  margin-left: -3.6rem;
+}
+   
+.new-text-inputs{
+    border: 0;
+    background: none;
+    display: block;
+    text-align: center;
+    border: 2px solid black;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    width: 10.2rem;
+    margin-bottom: -1rem;
+}
+
+.new-text-inputs:focus{
+    width: 12rem;
+    border-color: rgb(255, 199, 56);
+    margin-left: -0.8rem;
+}
+
+.new-text-inputs2{
+    border: 0;
+    background: none;
+    display: block;
+    text-align: center;
+    border: 2px solid black;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    width: 23rem;
+    margin-bottom: .01rem;
+    margin-top: -1rem;
+    margin-left: -1.2rem;
+}
+
+.new-text-inputs2:focus{
+    width: 24rem;
+    border-color: rgb(255, 199, 56);
+    margin-left: -1.5rem;
+}
+
+.first-two-text-inputs {
+    margin-right: .5rem;
+    margin-left: -1.1rem;
+}
+
+.last-two-text-inputs {
+    margin-left: .5rem;
+    
+}
+
+.second-row {
+    margin-top: -1rem;
+}
+
+.button {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid black;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    margin-top: -.2rem;
+}
+   
+.button:hover{
+    background: darkgoldenrod;
+}
+
+.checkbox{
+    display: flex;
+    flex-direction: row;
+    margin-left: -2rem;
+    margin-top: -2rem;
+    margin-bottom: 1rem;
+}
+
+.bottom-text {
+    display: flex;
+    flex-direction: row;
+    margin-top: -.3rem;
+    font-size: .7rem;
+  }

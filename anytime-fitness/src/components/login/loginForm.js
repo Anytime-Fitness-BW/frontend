@@ -17,7 +17,12 @@ export default function LoginForm(props) {
     const onSubmit = event => {
         event.preventDefault()
         loginSubmit()
-        history.push('/dashboard')
+
+        if(loginValues.auth_code === ''){
+            return history.push('/dashboard')
+        } else{
+            return history.push('/dashboard/instructor')
+        }
     }
 
     const onChange = (event) => {
@@ -101,6 +106,7 @@ export default function LoginForm(props) {
                 </label>
                 <p className='login-checkbox-text'>Remember me</p>
                 <p className='white-space'></p>
+
                 <Link className='login-text-link' to='/'>Forget password?</Link>
             </section>
 

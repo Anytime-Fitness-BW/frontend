@@ -46,54 +46,7 @@ nav {
   border-bottom: 1px solid #1c5d76;
 }
 
-
-/* Home page Styling */
-
-.home-wrapper {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-}
-
-.home-image {
-  width: 50rem;
-  min-width: 1032px;
-  height: 43rem;
-  border-radius: 2rem;
-}
-
-.buttons-and-link {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: -10rem;
-}
-
-.clientButton {
-  margin: 1rem;
-  width: 10rem;
-  height: 2rem;
-}
-
-.instructorButton {
-  margin: 1rem;
-  width: 12rem;
-  height: 2rem;
-}
-
 /* Sign Up Forms Styling */
-#signUpForm {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: -0.2rem;
-  margin-left: 7rem;
-  margin-right: 7rem;
-  font-weight: 600;
-}
-
 .form-image {
   height: 10rem;
   width: 10rem;
@@ -107,36 +60,44 @@ nav {
   margin-bottom: -1rem;
 }
 
+.signup-title {
+  margin-left: -2rem;
+}
+
 .hr2 {
   width: 20rem;
   margin-top: -1rem;
   margin-bottom: 1rem;
 }
 
-.form-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.signup-form-image {
+  height: 10rem;
+  width: 10rem;
+  margin-top: 2rem;
+  margin-bottom: -.7rem;
+  margin-left: -3rem;
 }
+
+.signup-hr {
+  width: 20rem;
+  margin-top: 1rem;
+  margin-bottom: -1rem;
+  margin-left: 29.5rem;
+}
+
+.signup-hr2 {
+  width: 20rem;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+  margin-left: 29.5rem;
+}
+
 
 .first-four-text-inputs {
   display: flex;
   flex-flow: row wrap;
   width: 25rem;
   margin-left: 1rem;
-}
-
-.text-inputs {
-  width: 300px;
-  margin-left: -5.25rem;
-}
-
-.checkbox{
-  display: flex;
-  flex-direction: row;
-  margin-left: -2rem;
-  margin-top: -1rem;
 }
 
 .checkbox-square {
@@ -148,13 +109,6 @@ nav {
   font-size: .75rem;
 }
 
-.bottom-text {
-  display: flex;
-  flex-direction: row;
-  margin-left: -2rem;
-  margin-top: .5rem;
-  font-size: .7rem;
-}
 
 .bottom-text-link {
   margin-top: .6rem;
@@ -162,9 +116,6 @@ nav {
   color: black;
 }
 
-.button{
-  margin-left: -1rem;
-}
 
 /* Login Form Styling */
 
@@ -301,12 +252,6 @@ nav {
   justify-content: center;
 }
 
-.white-space {
-  font-size: .65rem;
-  margin-top: .8rem;
-  color: white;
-}
-
 .login-text-link {
   margin-top: .8rem;
   margin-left: .4rem;
@@ -320,8 +265,436 @@ nav {
 .login-button{
   margin-top: 1rem;
   width: 15rem;
-}  */
+}
+
+.space{
+  margin-left: 1rem;
+}
+
+/* Client Dashboard Styling */
+.header {
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-image {
+  height: 2rem;
+  width: 2rem;
+}
+
+.search {
+  border-radius: .5rem;
+  height: 1.5rem;
+}
+
+.client-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 17.5rem;
+}
+
+.user{
+  display: flex;
+  flex-direction: row wrap;
+  margin-top: .5rem;
+  margin-left: 8rem;
+  font-size: small;
+  display: flex;
+  justify-content: center;
+}
+
+.user-image {
+  height: 1.7rem;
+  width: 1.7rem;
+  margin-top: .5rem;
+}
+
+.username {
+  margin-left: .2rem;
+  margin-top: .95rem;
+  color: black;
+  text-shadow: none;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: none;
+}
+
+.menu-image {
+  height: 5rem;
+  width: 5rem;
+}
+
+.middle-section {
+  text-decoration: underline;
+}
+
+.title-2 {
+  margin-top: 3rem;
+}
+
+.filter {
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: space-evenly;
+  font-size: small;
+  margin-top: -.5rem;
+}
+
+.classes-container {
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: space-around;
+}
+
+.class-card {
+  border: 1px solid black;
+  width: 28rem;
+  height: 32.5rem;
+  margin-top: 3rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.class-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(39, 17, 45, 0.1);
+}
+
+.class-img {
+  width: 28rem;
+  border-bottom: 1px solid black;
+}
+
+.mini-section-container {
+  display: flex;
+  flex-direction: row;
+  text-decoration: underline;
+  justify-content: center;
+  margin-top: 1.5rem;
+  border: 1px solid black;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.mini-section {
+  display: flex;
+  flex-direction: column;
+  font-size: medium;
+}
+
+.mini-section-2 {
+  display: flex;
+  flex-direction: column;
+  font-size: medium;
+}
+
+.class-info {
+ text-align: left;
+ margin-left: 1rem;
+}
+
+.price {
+  text-decoration: underline;
+}
+
+.class-signup-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.signup-button{
+  margin-bottom: 3rem;
+  margin-right: 1rem;
+  width: 8rem;
+  margin-left: 11rem;
+  margin-right: 11rem;
+  margin-top: 1rem;
+}
+
+.signup-button:hover {
+  box-shadow: 0 8px 16px 0 rgba(39, 17, 45, 0.1);
+  -webkit-transform: scale(1.05) translate(0px, -4px);
+  -ms-transform: scale(1.05) translate(0px, -4px);
+  transform: scale(1.05) translate(0px, -4px);
+  background-color: white;
+}
+
+.client-nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-decoration: underline;
+  color: black;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+/* Client Dashboard - Add Class Page */
+.filter-bar {
+  margin-top: -2.8rem;
+  margin-left: .5rem;
+}
+
+.filter-input {
+  margin-top: -2.8rem;
+  margin-left: .5rem;
+}
+
+.sort-by {
+  margin-left: 5rem;
+  margin-top: 2.5rem;
+  margin-right: 1rem;
+  width: 10rem;
+  text-decoration: underline;
+}
+
+.ac-middle-section {
+  margin-top: 4rem;
+  font-size: 1.4rem;
+}
+
+.ac-class-card {
+  border: 1px solid black;
+  width: 35rem;
+  height: 32.5rem;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  margin-right: 1rem;
+  font-size: .9rem;
+}
+
+.ac-class-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(39, 17, 45, 0.1);
+}
+
+.ac-class-img {
+  height: 15.5rem;
+  width: 35rem;
+  border-bottom: 1px solid black;
+}
+
+.ac-mini-section-container {
+  display: flex;
+  flex-direction: row;
+  text-decoration: underline;
+  justify-content: center;
+  margin-top: .5rem;
+  border: 1px solid black;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.ac-mini-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.ac-class-info {
+ text-align: left;
+ margin-left: 1rem;
+}
+
+.register-button{
+  margin-bottom: 3rem;
+  margin-right: 1rem;
+  width: 8rem;
+  margin-left: 13rem;
+  margin-right: 11rem;
+  margin-top: 1rem;
+}
+
+.register-button:hover {
+  box-shadow: 0 8px 16px 0 rgba(39, 17, 45, 0.1);
+  background-color: white;
+}
+
+/* Instructor Dashboard Styling */
+.instructor-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 19rem;
+}
+
+.main-title {
+  margin-top: 8rem;
+  font-size: 3.5rem;
+  margin-left: 2rem;
+}
+
+.dashboard-buttons {
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+}
+
+.button1 {
+  width: 30rem;
+  height: 10rem;
+  margin-right: 5rem;
+}
+
+.button1:hover {
+  box-shadow: 0 8px 16px 0 rgba(39, 17, 45, 0.1);
+  -webkit-transform: scale(1.05) translate(0px, -4px);
+  -ms-transform: scale(1.05) translate(0px, -4px);
+  transform: scale(1.05) translate(0px, -4px);
+  background-color: white;
+}
+
+.button2 {
+  width: 30rem;
+  height: 10rem;
+  margin-left: 5rem;
+}
+
+.button2:hover {
+  box-shadow: 0 8px 16px 0 rgba(39, 17, 45, 0.1);
+  -webkit-transform: scale(1.05) translate(0px, -4px);
+  -ms-transform: scale(1.05) translate(0px, -4px);
+  transform: scale(1.05) translate(0px, -4px);
+  background-color: white;
+}
 
 
 
+/* Create a Class - Instructor Dashboard Styling */
+#createClassForm {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2.5rem;
+  margin-left: 7rem;
+  margin-right: 7rem;
+  font-weight: 600;
+}
 
+.header:hover {
+  box-shadow: 0 8px 16px 0 rgba(39, 17, 45, 0.1);
+}
+
+.form-title {
+  border-bottom: 1px solid black;
+}
+
+.create-class-container {
+  border: 1px solid black;
+  margin-top: 5rem;
+  width: 30rem;
+  height: 30rem;
+  margin-left: 35rem;
+}
+
+
+.create-class-container:hover {
+  box-shadow: 0 8px 16px 0 rgba(39, 17, 45, 0.1);
+}
+
+.date-and-time {
+  display: flex;
+  flex-direction: row;
+}
+
+.create-text-input {
+  margin-bottom: .5rem;
+}
+
+.time {
+  margin-left: 1.3rem;
+}
+
+.create-checkbox {
+  margin-top: .5rem;
+  margin-bottom: 2rem;
+}
+
+.create-checkbox-text {
+  font-size: .9rem;
+}
+
+.create-button {
+  width: 10rem;
+  margin-left: 3.3rem;
+}
+
+/* My Classes - Instructor Dashboard Styling */
+.mc-classes-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 16rem;
+  margin-top: -2rem;
+}
+
+.mc-class-card {
+  border: 1px solid black;
+  width: 60rem;
+  height: 20rem;
+  margin-top: 3rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.mc-class-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(39, 17, 45, 0.1);
+}
+
+.mc-class-img {
+  width: 28rem;
+  height: 15rem;
+  margin-left: 1rem;
+  margin-top: 2.5rem;
+}
+
+.mc-mini-section-container {
+  display: flex;
+  flex-direction: row;
+  text-decoration: underline;
+  justify-content: center;
+  margin-top: 1.5rem;
+  border: 1px solid black;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 60rem;
+  height: 15rem;
+  margin-top: 2.5rem;
+}
+
+.mc-mini-section {
+  display: flex;
+  flex-direction: column;
+  font-size: medium;
+}
+
+.mc-mini-section-2 {
+  display: flex;
+  flex-direction: column;
+  font-size: medium;
+}
+
+.mc-class-info {
+ text-align: left;
+ margin-left: 1rem;
+}
+
+.button-1 {
+  width: 5rem;
+  margin-top: .7rem;
+}
+
+.button-2 {
+  width: 5rem;
+  margin-left: 9rem;
+  margin-top: .7rem;
+}
