@@ -137,6 +137,8 @@ function App() {
       .catch(error => console.log('Error Posting Instructors:', error))
   }
 
+  
+
 
 
   // EVENT HELPERS //
@@ -269,6 +271,9 @@ useEffect(() => {
       </Route>
       <Route exact path="/instructor/classes">
         <MyClasses />
+      </Route>
+      <Route exact path="/logout">
+        {/* Logout component will go here */}
       </Route>
     </div>
   );

@@ -1,0 +1,124 @@
+/* Home page Styling */
+.home {
+    background: #000;
+    color: #030303;
+    font-family: sans-serif;
+    background-image: url(https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.space {
+    color: transparent;
+}
+
+.nav {
+    padding: 2%;
+    cursor: pointer;
+    color: black;
+}
+
+.nav:hover {
+    box-shadow: 0 8px 16px 0 rgba(39, 17, 45, 0.1);
+}
+
+.logo {
+    font-size: 1.5em;
+    display: inline;
+    font-weight: bold;
+    margin-left: -40rem;
+}
+
+.nav ul {
+    list-style: none;
+    float: right;
+    font-size: 0.8em;
+    margin: 0;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.nav ul li {
+    display: inline;
+    padding: 0 30px;
+    letter-spacing: 1px;
+}
+  
+.hero {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 100px 0;
+    flex-wrap: wrap;
+}
+
+.title {
+    font-size: 6rem;
+    text-align: center;
+    width: 100%;
+    font-family: serif;
+    font-weight: bold;
+    text-shadow: .1rem .1rem rgba(173, 161, 161, 0.466);
+    margin-top: 1.2rem;
+}
+
+.title::before {
+    content: "find your perfect class today";
+    font-size: 10px;
+    letter-spacing: 1.8px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(202, 72, 72);
+    display: block;
+    text-transform: uppercase;
+    margin-bottom: -5px;
+    text-shadow: none;
+}
+
+.home-buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2.5rem;
+}
+  
+.home-button1 {
+    background: #f3d31e;
+    padding: 18px 29px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 3%;
+    cursor: pointer;
+    margin-right: .5rem;
+}
+
+.home-button1:hover {
+    box-shadow: 0 8px 16px 0 rgba(39, 17, 45, 0.1);
+}
+
+.home-button2 {
+    background: #f3d31e;
+    padding: 18px 29px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 3%;
+    cursor: pointer;
+    margin-left: .5rem;
+}
+
+.home-button2:hover {
+    box-shadow: 0 8px 16px 0 rgba(39, 17, 45, 0.1);
+}
+
+.home-link {
+    margin-top: -4rem;
+}
+
+.home-link:hover {
+    text-shadow: .1rem .1rem rgba(173, 161, 161, 0.466);
+}
+
