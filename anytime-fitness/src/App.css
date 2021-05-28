@@ -342,7 +342,7 @@ nav {
   border-bottom-right-radius: .5rem;
   border-bottom-left-radius: .5rem;
   background: lightgray;
-  opacity: 90%;
+  opacity: .9;
 }
 
 .class-card:hover {
@@ -492,7 +492,7 @@ nav {
   border-bottom-right-radius: .5rem;
   border-bottom-left-radius: .5rem;
   background: lightgray;
-  opacity: 90%;
+  opacity: .9;
 }
 
 .ac-class-card:hover {

@@ -112,7 +112,7 @@ function App() {
 
   // HELPERS //
   const postNewClient = (newClient) => {
-    axios.post('https://anytime-fitness-bw.herokuapp.com/', newClient)
+    axios.post('https://anytime-fitness-bw.herokuapp.com/api/auth/register', newClient)
       .then(({data}) => {
         setClient([data, ...client])
         console.log(data)
@@ -121,7 +121,7 @@ function App() {
   }
 
   const postNewInstructor = (newInstructor) => {
-    axios.post('https://anytime-fitness-bw.herokuapp.com/', newInstructor)
+    axios.post('https://anytime-fitness-bw.herokuapp.com/api/auth/register', newInstructor)
       .then(({data}) => {
         setInstructor([data, ...instructor])
         console.log(data)
@@ -130,7 +130,7 @@ function App() {
   }
 
   const postNewLogin = (newLogin) => {
-    axios.post('https://anytime-fitness-bw.herokuapp.com/', newLogin)
+    axios.post('https://anytime-fitness-bw.herokuapp.com//api/auth/login', newLogin)
       .then(({data}) => {
         setLogin([data, ...login])
         console.log(data)
