@@ -16,9 +16,10 @@
     padding: 2%;
     cursor: pointer;
     color: black;
+    margin-left: 55rem;
 }
 
-.nav:hover {
+.container:hover {
     box-shadow: 0 8px 16px 0 rgba(39, 17, 45, 0.1);
 }
 
@@ -26,7 +27,7 @@
     font-size: 1.5em;
     display: inline;
     font-weight: bold;
-    margin-left: -40rem;
+    margin-left: -99rem;
 }
 
 .nav ul {
