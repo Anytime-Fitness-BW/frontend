@@ -50,6 +50,7 @@ const [register, setRegister] = useState(initialState)
         <div className='form1'>
             <form id='signUpForm' onSubmit={onSubmit}>
                 <nav>
+                    <h1></h1>
                     <div className='nav-links'>
                         <Link to='/' style={{ color: 'white', textDecoration: 'underline' }}>Home</Link>
                     </div>
