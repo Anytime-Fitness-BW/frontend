@@ -13,7 +13,6 @@ export default function ClientSignUpForm(props) {
         errors,
     } = props
 
-    console.log('register me')
 
     const history = useHistory();
 
