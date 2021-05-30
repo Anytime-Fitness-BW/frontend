@@ -12,9 +12,6 @@ const initialState = [{
   intensity: '',
   numberOfRegisteredAttendees: '',
   maxClassSize:'',
-  // date: '',
-  // price: '',
-  // description:''
 }]
 
 const mockInitialState = [{
@@ -32,7 +29,7 @@ const mockInitialState = [{
 }]
 
 const MyClasses = () => {
-  const [classes, setClasses] = useState(mockInitialState)
+  const [classes, setClasses] = useState(initialState)
 
   // to access the classes available upon mount
 
@@ -138,19 +135,8 @@ const MyClasses = () => {
             <input
               className='filter-bar'
               type="text"
-              name="date"
-              value={classes.date}
-              onChange={changeHandler}
-              placeholder="Date"
-              style={{backgroundColor: 'lightgray'}}
-            />
-          </label>
-          <label>
-            <input
-              className='filter-bar'
-              type="text"
               name="time"
-              value={classes.time}
+              value={classes.startTime}
               onChange={changeHandler}
               placeholder="Time"
               style={{backgroundColor: 'lightgray'}}
@@ -171,10 +157,10 @@ const MyClasses = () => {
             <input
               className='filter-bar'
               type="text"
-              name="type"
-              value={classes.type}
+              name="intensity"
+              value={classes.intensity}
               onChange={changeHandler}
-              placeholder="Type"
+              placeholder="Intensity Level"
               style={{backgroundColor: 'lightgray'}}
             />
           </label>
@@ -193,10 +179,21 @@ const MyClasses = () => {
             <input
               className='filter-bar'
               type="text"
-              name="intensity"
-              value={classes.intensity}
+              name="registeredAttendees"
+              value={classes.numberOfRegisteredAttendees}
               onChange={changeHandler}
-              placeholder="Intensity Level"
+              placeholder="Location"
+              style={{backgroundColor: 'lightgray'}}
+            />
+          </label>
+          <label>
+            <input
+              className='filter-bar'
+              type="text"
+              name="maxClassSize"
+              value={classes.maxClassSize}
+              onChange={changeHandler}
+              placeholder="Max Attendees"
               style={{backgroundColor: 'lightgray'}}
             />
           </label>
