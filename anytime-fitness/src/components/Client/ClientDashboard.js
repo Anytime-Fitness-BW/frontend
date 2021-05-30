@@ -1,16 +1,47 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
+import axiosWithAuth from '../../utils/axiosWithAuth'
 
+const initialState = [{
+  name: '',
+  startTime: '',
+  duration: '',
+  type: '',
+  location: '',
+  intensity: '',
+  numberOfRegisteredAttendees: '',
+  maxClassSize:'',
+}]
 
+const mockInitialState = [{
+  name: 'Underwater Basket Weaving',
+  startTime: '3pm',
+  duration: '3 mo',
+  type: 'Aquatic',
+  location: 'Lake Michigan',
+  intensity: 'High',
+  numberOfRegisteredAttendees: '3',
+  maxClassSize: '10',
+}]
 
 const ClientDashboard = () => {
   const history = useHistory();
+  const [classes, setClasses] = useState(mockInitialState)
 
   const onClick = event => {
     event.preventDefault()
     history.push('/dashboard/add')
 }
 
+  const addHandler = () => {
+    axiosWithAuth()
+      .then(res=>{
+        setClasses(res.data)
+      })
+      .catch(err=>{
+        console.log({err})
+      })
+  }
 
   return (
     <div className='background-img'>
@@ -94,6 +125,29 @@ const ClientDashboard = () => {
             </div>
           </div>
           <p className='price'>Price: $80</p>
+        </section>
+        <section className='class-card'>
+          <img className='class-img' src='https://images.pexels.com/photos/3755440/pexels-photo-3755440.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' alt='camp.img' />
+          <div className='mini-section-container'>
+            {classes.map((aClass)=> {
+               return<div>
+                <div className='mini-section'>
+               <p>{aClass.id}</p>
+               <p>Class: {aClass.name}</p>
+               <p>Type: {aClass.type}</p>
+               <p>Time: {aClass.startTime}</p>
+               <p>Duration: {aClass.duration}</p>
+               <p>Location: {aClass.location}</p>
+               </div>
+               <div className='mini-section-2'>
+               <p>Intensity: {aClass.intensity}</p>
+               <p>Attendees: {aClass.numberOfRegisteredAttendees}</p>
+               <p>Max Attendees: {aClass.maxClassSize}</p>
+               </div>
+               <button onClick={addHandler}>Add Class</button>
+             </div>
+           })}
+          </div>
         </section>
       </div>
       <div className='class-signup-buttons' onClick={onClick}>

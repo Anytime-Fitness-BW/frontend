@@ -1,8 +1,14 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useState } from 'react'
 import { useHistory, Link } from "react-router-dom";
+import axiosWithAuth from '../../utils/axiosWithAuth';
 import './Form.css'
 
-
+const initialState = [{
+    username: "",
+    password: "",
+    auth: "0"
+}]
 
 export default function ClientSignUpForm(props) {
     const {
@@ -12,11 +18,21 @@ export default function ClientSignUpForm(props) {
         disabled,
         errors,
     } = props
+const [register, setRegister] = useState(initialState)
 
     const history = useHistory();
 
     const onSubmit = event => {
         event.preventDefault()
+        axiosWithAuth()
+            .post('/api/auth/register', register)
+            .then(res=>{
+            setRegister(...register, res.data)  
+            })
+            .catch(err=>{
+                console.log({err})
+            })
+
         submit()
         history.push('/dashboard')
     }
@@ -33,7 +49,6 @@ export default function ClientSignUpForm(props) {
         <div className='form1'>
             <form id='signUpForm' onSubmit={onSubmit}>
                 <nav>
-                    <h1></h1>
                     <div className='nav-links'>
                         <Link to='/' style={{ color: 'white', textDecoration: 'underline' }}>Home</Link>
                     </div>

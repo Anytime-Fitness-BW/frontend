@@ -2,6 +2,7 @@ import axios from 'axios'
 import React from 'react'
 import { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
+import axiosWithAuth from '../../utils/axiosWithAuth'
 
 const initialState = {
   className: '',
@@ -33,7 +34,7 @@ const CreateClass = (props) => {
     e.preventDefault()
 
 
-    axios
+    axiosWithAuth()
       .post('', formValues)
       .then(res => {
         console.log("create post RES", res)
