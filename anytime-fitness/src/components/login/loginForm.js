@@ -25,21 +25,20 @@ export default function LoginForm(props) {
         axiosWithAuth()
             .post('/api/auth/login', {username:"", password: "", auth: ""})
             .then(res=>{
-                console.log("login post RES")
-                localStorage.setItem("token", res.data.payload)
-
+                console.log("login post RES", res)
+                localStorage.setItem("token", res.data.token)
+                if (loginValues.auth_code === '') {
+                    return history.push('/dashboard')
+                } else {
+                    return history.push('/dashboard/instructor')
+                }
             })
             .catch(err=>{
                 console.log({err})
             })
-        loginSubmit()
 
-        if (loginValues.auth_code === '') {
-            return history.push('/dashboard')
-        } else {
-            return history.push('/dashboard/instructor')
-        }
-    }
+        
+     }
 
     const onChange = (event) => {
         const { name, value, checked, type } = event.target;

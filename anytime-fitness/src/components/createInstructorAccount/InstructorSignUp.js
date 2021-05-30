@@ -23,15 +23,15 @@ function InstructorSignUp(props) {
     const onSubmit = event => {
         event.preventDefault()
         axiosWithAuth()
-            .post('/api/auth/register', {username:"", password: "", auth: "1"})
+            .post('/api/auth/register', {username:instructorValues.username, password: instructorValues.password})
             .then(res=>{
-            setRegister(res.data)  
+                console.log({res})
+                setRegister(res.data)
+                history.push('/dashboard/instructor')  
             })
             .catch(err=>{
                 console.log({err})
             })
-        instructorSubmit()
-        history.push('/dashboard/instructor')
     }
 
     const onChange = (event) => {

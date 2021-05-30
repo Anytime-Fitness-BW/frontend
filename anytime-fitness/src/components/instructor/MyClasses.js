@@ -117,9 +117,20 @@ const MyClasses = () => {
               className='filter-bar'
               type="text"
               name="className"
-              value={classes.className}
+              value={classes.name}
               onChange={changeHandler}
               placeholder="Class Name"
+              style={{backgroundColor: 'lightgray'}}
+            />
+          </label>
+          <label>
+            <input
+              className='filter-bar'
+              type="text"
+              name="type"
+              value={classes.type}
+              onChange={changeHandler}
+              placeholder="Type"
               style={{backgroundColor: 'lightgray'}}
             />
           </label>
@@ -264,8 +275,8 @@ const MyClasses = () => {
             <p>Type: {aClass.type}</p>
             <p>Time: {aClass.startTime}</p>
             <p>Duration: {aClass.duration}</p>
-            <p>Location: {aClass.location}</p>
             <p>Intensity: {aClass.intensity}</p>
+            <p>Location: {aClass.location}</p>
             <p>Attendees: {aClass.numberOfRegisteredAttendees}</p>
             <p>Max Attendees: {aClass.maxClassSize}</p>
             <button onClick={editHandler}>Edit</button>
