@@ -18,7 +18,7 @@ const initialState = [{
 
 const MyClasses = () => {
   const [classes, setClasses] = useState(initialState)
-
+  const [singleClass, setSingleClass] = useState({})
   // to access the classes available upon mount
 
   useEffect(() => {
@@ -36,11 +36,11 @@ const MyClasses = () => {
   const editHandler = (e, id) => {
     e.preventDefault()
     axiosWithAuth()
-      .put(`/api/classes/${id}`, classes)
+      .put(`/api/classes/${id}`, singleClass)
       .then(res=>{
         console.log('MyClasses put RES', res)
         const editClass = classes.filter((aClass) => aClass.id !== Number(id) )
-        editClass.push(classes)
+        editClass.push(singleClass)
         setClasses(editClass)
       })
         .catch(err => {
