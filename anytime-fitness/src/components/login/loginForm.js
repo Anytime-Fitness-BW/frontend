@@ -2,7 +2,11 @@ import React, { useState } from 'react'
 import { useHistory, Link } from "react-router-dom";
 import axiosWithAuth from '../../utils/axiosWithAuth';
 
-
+const initialState = [{
+    username:"", 
+    password: "", 
+    auth: ""
+}]
 
 export default function LoginForm(props) {
     const {
@@ -12,14 +16,14 @@ export default function LoginForm(props) {
         loginDisabled,
         loginErrors,
     } = props
-  const [register, setRegister] = useState(loginValues)
+  const [register, setRegister] = useState(initialState)
     
   const history = useHistory();
 
     const onSubmit = event => {
         event.preventDefault()
         axiosWithAuth()
-            .post('/api/auth/login', register)
+            .post('/api/auth/login', {username:"", password: "", auth: ""})
             .then(res=>{
                 console.log("login post RES")
                 localStorage.setItem("token", res.data.payload)

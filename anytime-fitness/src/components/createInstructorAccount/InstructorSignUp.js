@@ -23,9 +23,9 @@ function InstructorSignUp(props) {
     const onSubmit = event => {
         event.preventDefault()
         axiosWithAuth()
-            .post('/api/auth/register', register)
+            .post('/api/auth/register', {username:"", password: "", auth: "1"})
             .then(res=>{
-            setRegister(...register, res.data)  
+            setRegister(res.data)  
             })
             .catch(err=>{
                 console.log({err})

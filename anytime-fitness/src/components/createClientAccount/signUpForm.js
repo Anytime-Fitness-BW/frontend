@@ -7,7 +7,13 @@ import './Form.css'
 const initialState = [{
     username: "",
     password: "",
-    auth: "0"
+    auth: "0",
+    first_name: "",
+    last_name: "",
+    city: "",
+    zipcode: "",
+    email: "",
+    terms: false
 }]
 
 export default function ClientSignUpForm(props) {
@@ -19,24 +25,22 @@ export default function ClientSignUpForm(props) {
         errors,
     } = props
 const [register, setRegister] = useState(initialState)
-
-    console.log('register me')
-
+console.log("1", values)
     const history = useHistory();
 
     const onSubmit = event => {
         event.preventDefault()
         axiosWithAuth()
-            .post('/api/auth/register', register)
+            .post('/api/auth/register', {username: values.username, password: values.password} )
             .then(res=>{
-            setRegister(...register, res.data)  
+                setRegister(res.data.data) 
+                history.push('/dashboard') 
             })
             .catch(err=>{
                 console.log({err})
             })
 
-        submit()
-        history.push('/dashboard')
+        
     }
 
     const onChange = (event) => {
