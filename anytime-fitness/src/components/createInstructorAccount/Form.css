@@ -30,7 +30,7 @@
     background: darkgray;
     text-align: center;
     border-radius: 1.5rem;
-    opacity: 80%;
+    opacity: .8;
   }
 
   .form-container:hover {

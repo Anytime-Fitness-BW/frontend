@@ -20,6 +20,8 @@ export default function ClientSignUpForm(props) {
     } = props
 const [register, setRegister] = useState(initialState)
 
+    console.log('register me')
+
     const history = useHistory();
 
     const onSubmit = event => {
