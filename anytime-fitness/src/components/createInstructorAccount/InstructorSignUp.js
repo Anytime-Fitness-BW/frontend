@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useHistory, Link } from "react-router-dom";
+import axiosWithAuth from '../../utils/axiosWithAuth';
 import './Form.css'
 
+const initialState = [{
+    username: "",
+    password: "",
+    admin: 1
+}]
 
 function InstructorSignUp(props) {
     const {
@@ -11,11 +17,19 @@ function InstructorSignUp(props) {
         instructorDisabled,
         instructorErrors,
     } = props
-
+    const [register, setRegister] = useState(initialState)
     const history = useHistory();
 
     const onSubmit = event => {
         event.preventDefault()
+        axiosWithAuth()
+            .post('/api/auth/register', register)
+            .then(res=>{
+            setRegister(...register, res.data)  
+            })
+            .catch(err=>{
+                console.log({err})
+            })
         instructorSubmit()
         history.push('/dashboard/instructor')
     }

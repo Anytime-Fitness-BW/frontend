@@ -1,31 +1,47 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link, useHistory } from 'react-router-dom'
+import axiosWithAuth from '../../utils/axiosWithAuth'
 
-const initialState = {
-  className: '',
-  date: '',
-  time: '',
+const initialState = [{
+  name: '',
+  startTime: '',
   duration: '',
   type: '',
   location: '',
   intensity: '',
-  price: '',
-  attendees: '',
-  maxSize: '',
-}
+  numberOfRegisteredAttendees: '',
+  maxClassSize:'',
+  // date: '',
+  // price: '',
+  // description:''
+}]
+
+const mockInitialState = [{
+  name: 'Underwater Basket Weaving',
+  startTime: '3pm',
+  duration: '3 mo',
+  type: 'Aquatic',
+  location: 'Lake Michigan',
+  intensity: 'High',
+  numberOfRegisteredAttendees: '3',
+  maxClassSize: '10',
+  // date: 'June 9th',
+  // price: '$300',
+  // description:''
+}]
 
 const MyClasses = () => {
-  const [classes, setClasses] = useState(initialState)
+  const [classes, setClasses] = useState(mockInitialState)
 
   // to access the classes available upon mount
 
   useEffect(() => {
-    axios
-      .get('')
+    axiosWithAuth()
+      .get('/api/classes')
       .then(res => {
         console.log('MyClasses get RES', res)
-
+        setClasses(res.data)
       })
       .then(err => { console.log('MyClasses get ERR', err) })
   }, [])
@@ -34,23 +50,31 @@ const MyClasses = () => {
 
   const editHandler = (e) => {
     e.preventDefault()
-    axios
-      .put('', classes)
-      .then(res => {
+ 
+    const id = classes.id
+    axiosWithAuth()
+      .put(`/api/classes/${id}`, classes)
+      .then(res=>{
         console.log('MyClasses put RES', res)
+        const editClass = classes.filter((aClass) => aClass.id !== id )
+        editClass.push(classes)
+        setClasses(editClass)
       })
-      .catch(err => {
+        .catch(err => {
         console.log('MyClasses put ERR', err)
       })
   }
-
   // to delete a class
 
-  const deleteHandler = (e) => {
-    axios
-      .put('', classes)
-      .then(res => { console.log('MyClasses put RES', res) })
-      .catch(err => { console.log('MyClasses put ERR', err) })
+  const deleteHandler = (delClass) => {
+    axiosWithAuth()      
+    .delete(`/api/classes/${delClass}`, classes)
+      .then(res => { 
+        console.log('MyClasses delete RES', res) 
+        const remainingClasses = classes.filter((aClass)=> aClass.id !== Number(res.data))
+        setClasses(remainingClasses)
+    })
+      .catch(err => { console.log('MyClasses delete ERR', err) })
   }
 
   const changeHandler = (e) => {
@@ -102,7 +126,7 @@ const MyClasses = () => {
           <label>
             <input
               className='filter-bar'
-              type="date"
+              type="text"
               name="date"
               value={classes.date}
               onChange={changeHandler}
@@ -113,7 +137,7 @@ const MyClasses = () => {
           <label>
             <input
               className='filter-bar'
-              type="time"
+              type="text"
               name="time"
               value={classes.time}
               onChange={changeHandler}
@@ -220,21 +244,40 @@ const MyClasses = () => {
               <p className='mc-class-info'>Location: Miami, FL</p>
               <p className='mc-class-info'>Date: June 24, 2021</p>
               <p className='mc-class-info'>Time: 1:30pm to 3:00pm</p>
-              <button className='button-1' onClick={editHandler}>Edit</button>
             </div>
             <div className='mc-mini-section-2'>
               <p className='mc-class-info'>Duration: 4 months</p>
               <p className='mc-class-info'>Level: Expert</p>
               <p className='mc-class-info'>Type: Bootcamp</p>
               <p className='mc-class-info'>Price: $45</p>
-              <button className='button-2' onClick={deleteHandler}>Delete</button>
             </div>
           </div>
         </section>
+
+        <section className='mc-class-card'>
+          <img className='mc-class-img' src='https://media.istockphoto.com/vectors/weights-symbol-icon-black-minimalist-dumbbell-outline-isolated-vector-vector-id1130190327?k=6&m=1130190327&s=170667a&w=0&h=TvK9RZNYmEHPpWMKRHMA6TQVVHtPUMtdhhHZmDcecBQ=' alt='placeholder.img' />
+          <div className='mc-mini-section-container'>
+            {classes.map((aClass)=> {
+            return<div>
+            <p>{aClass.id}</p>
+            <p>Class: {aClass.name}</p>
+            <p>Type: {aClass.type}</p>
+            <p>Time: {aClass.startTime}</p>
+            <p>Duration: {aClass.duration}</p>
+            <p>Location: {aClass.location}</p>
+            <p>Intensity: {aClass.intensity}</p>
+            <p>Attendees: {aClass.numberOfRegisteredAttendees}</p>
+            <p>Max Attendees: {aClass.maxClassSize}</p>
+            <button onClick={editHandler}>Edit</button>
+            <button onClick={deleteHandler}>Delete</button>
+          </div>
+        })}
+        </div>
+        </section>
+        
       </div>
 
       <nav>
-        <h1></h1>
         <div className='client-nav-links'>
           <Link to='/dashboard/instructor'>Back to Dashboard</Link>
         </div>
