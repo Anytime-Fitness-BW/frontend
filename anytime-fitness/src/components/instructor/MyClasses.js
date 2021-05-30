@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link, useHistory } from 'react-router-dom'
 import axiosWithAuth from '../../utils/axiosWithAuth'
+import ClassesMap from './ClassesMap'
+import EditForm from './EditForm'
 
 const initialState = [{
   name: '',
@@ -12,20 +14,6 @@ const initialState = [{
   intensity: '',
   numberOfRegisteredAttendees: '',
   maxClassSize:'',
-}]
-
-const mockInitialState = [{
-  name: 'Underwater Basket Weaving',
-  startTime: '3pm',
-  duration: '3 mo',
-  type: 'Aquatic',
-  location: 'Lake Michigan',
-  intensity: 'High',
-  numberOfRegisteredAttendees: '3',
-  maxClassSize: '10',
-  // date: 'June 9th',
-  // price: '$300',
-  // description:''
 }]
 
 const MyClasses = () => {
@@ -40,20 +28,18 @@ const MyClasses = () => {
         console.log('MyClasses get RES', res)
         setClasses(res.data)
       })
-      .then(err => { console.log('MyClasses get ERR', err) })
+      .then(err => { console.log({err}) })
   }, [])
 
   // to update the class
 
-  const editHandler = (e) => {
+  const editHandler = (e, id) => {
     e.preventDefault()
- 
-    const id = classes.id
     axiosWithAuth()
       .put(`/api/classes/${id}`, classes)
       .then(res=>{
         console.log('MyClasses put RES', res)
-        const editClass = classes.filter((aClass) => aClass.id !== id )
+        const editClass = classes.filter((aClass) => aClass.id !== Number(id) )
         editClass.push(classes)
         setClasses(editClass)
       })
@@ -63,9 +49,10 @@ const MyClasses = () => {
   }
   // to delete a class
 
-  const deleteHandler = (delClass) => {
+  const deleteHandler = (e, id) => {
+    e.preventDefault()
     axiosWithAuth()      
-    .delete(`/api/classes/${delClass}`, classes)
+    .delete(`/api/classes/${id}`)
       .then(res => { 
         console.log('MyClasses delete RES', res) 
         const remainingClasses = classes.filter((aClass)=> aClass.id !== Number(res.data))
@@ -210,14 +197,14 @@ const MyClasses = () => {
               <p className='mc-class-info'>Location: Tampa, FL</p>
               <p className='mc-class-info'>Date: June 13, 2021</p>
               <p className='mc-class-info'>Time: 4:30pm to 6:00pm</p>
-              <button className='button-1' onClick={editHandler}>Edit</button>
+              
             </div>
             <div className='mc-mini-section-2'>
               <p className='mc-class-info'>Duration: 1 months</p>
               <p className='mc-class-info'>Level: Intermediate</p>
               <p className='mc-class-info'>Type: Cycling</p>
               <p className='mc-class-info'>Price: $45</p>
-              <button className='button-2' onClick={deleteHandler}>Delete</button>
+              
             </div>
           </div>
         </section>
@@ -232,14 +219,14 @@ const MyClasses = () => {
               <p className='mc-class-info'>Location: Orlando, FL</p>
               <p className='mc-class-info'>Date: June 6, 2021</p>
               <p className='mc-class-info'>Time: 7:30pm to 9:00pm</p>
-              <button className='button-1' onClick={editHandler}>Edit</button>
+              
             </div>
             <div className='mc-mini-section-2'>
               <p className='mc-class-info'>Duration: 2 months</p>
               <p className='mc-class-info'>Level: Beginner</p>
               <p className='mc-class-info'>Type: Circuit Training</p>
               <p className='mc-class-info'>Price: $45</p>
-              <button className='button-2' onClick={deleteHandler}>Delete</button>
+              
             </div>
           </div>
         </section>
@@ -266,19 +253,14 @@ const MyClasses = () => {
           <img className='mc-class-img' src='https://media.istockphoto.com/vectors/weights-symbol-icon-black-minimalist-dumbbell-outline-isolated-vector-vector-id1130190327?k=6&m=1130190327&s=170667a&w=0&h=TvK9RZNYmEHPpWMKRHMA6TQVVHtPUMtdhhHZmDcecBQ=' alt='placeholder.img' />
           <div className='mc-mini-section-container'>
             {classes.map((aClass)=> {
-            return<div>
-            <p>{aClass.id}</p>
-            <p>Class: {aClass.name}</p>
-            <p>Type: {aClass.type}</p>
-            <p>Time: {aClass.startTime}</p>
-            <p>Duration: {aClass.duration}</p>
-            <p>Intensity: {aClass.intensity}</p>
-            <p>Location: {aClass.location}</p>
-            <p>Attendees: {aClass.numberOfRegisteredAttendees}</p>
-            <p>Max Attendees: {aClass.maxClassSize}</p>
-            <button onClick={editHandler}>Edit</button>
-            <button onClick={deleteHandler}>Delete</button>
-          </div>
+              return<div>
+                
+                <ClassesMap aClass={aClass} />
+                <button onClick={(e)=>deleteHandler(e, classes.id)}>Delete</button>
+                <EditForm classes={classes} />
+                <button onClick={(e)=>editHandler(e, classes.id)}>Edit</button>
+                
+              </div>
         })}
         </div>
         </section>

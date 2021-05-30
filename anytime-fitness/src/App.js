@@ -16,6 +16,7 @@ import AddClass from './components/Client/AddClass'
 import CreateClass from './components/instructor/CreateClass'
 import MyClasses from './components/instructor/MyClasses'
 import LogoutConfirmation from './components/LogoutConfirmation';
+import PrivateRoute from './utils/PrivateRoute'
 
 
 
@@ -258,24 +259,24 @@ useEffect(() => {
           loginErrors = {loginFormErrors}
         />
       </Route>
-      <Route exact path='/dashboard'>
+      <PrivateRoute exact path='/dashboard'>
         <ClientDashboard/>
-      </Route>
-      <Route exact path="/dashboard/add">
+      </PrivateRoute>
+      <PrivateRoute exact path="/dashboard/add">
         <AddClass />
-      </Route>
-      <Route exact path='/dashboard/instructor'>
+      </PrivateRoute>
+      <PrivateRoute exact path='/dashboard/instructor'>
         <InstructorDashboard />
-      </Route>
-      <Route exact path="/instructor/create">
+      </PrivateRoute>
+      <PrivateRoute exact path="/instructor/create">
         <CreateClass />
-      </Route>
-      <Route exact path="/instructor/classes">
+      </PrivateRoute>
+      <PrivateRoute exact path="/instructor/classes">
         <MyClasses />
-      </Route>
-      <Route exact path="/logout">
+      </PrivateRoute>
+      <PrivateRoute exact path="/logout">
         <LogoutConfirmation/>
-      </Route>
+      </PrivateRoute>
     </div>
   );
 }
