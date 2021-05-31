@@ -23,7 +23,7 @@ export default function LoginForm(props) {
     const onSubmit = event => {
         event.preventDefault()
         axiosWithAuth()
-            .post('/api/auth/login', {username: loginValues.username_or_email, password: loginValues.password, Auth: loginValues.auth_code })
+            .post('/api/auth/login', {username: loginValues.username_or_email, password: loginValues.password, auth: loginValues.auth_code })
             .then(res=>{
                 console.log("login post RES", res)
                 localStorage.setItem("token", res.data.token)

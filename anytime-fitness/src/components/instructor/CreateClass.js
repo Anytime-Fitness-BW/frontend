@@ -32,13 +32,40 @@ const CreateClass = (props) => {
 
   const submitHandler = (e) => {
     e.preventDefault()
+    console.log( {
+      name:formValues.className,
+      date:formValues.date,
+      startTime:formValues.time,
+      duration: formValues.duration,
+      type: formValues.type,
+      intensity: formValues.intensity,
+      location: formValues.location,
+      numberOfRegisteredAttendees: formValues.attendees,
+      maxClassSize: formValues.maxSize
+    })
 
+    // "name": "hot yoga",
+    // "type": "stretch",
+    // "startTime": "3",
+    // "duration": "60",
+    // "intensity": "high",
+    // "location": "airport",
+    // "numberOfRegisteredAttendees": "10",
+    // "maxClassSize": "15"
 
     axiosWithAuth()
-      .post('', formValues)
+      .post('/api/classes', {
+        name:formValues.className,
+        startTime:formValues.time,
+        duration: formValues.duration,
+        type: formValues.type,
+        intensity: formValues.intensity,
+        location: formValues.location,
+        numberOfRegisteredAttendees: formValues.attendees,
+        maxClassSize: formValues.maxSize
+      })
       .then(res => {
         console.log("create post RES", res)
-        props.addClasses(formValues)
         push('/instructor/classes')
       })
       .catch(err => { console.log("create post ERR", err) })
