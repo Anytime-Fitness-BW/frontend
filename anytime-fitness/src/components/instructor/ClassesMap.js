@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const ClassesMap = (props) => {
-const {aClass} = props
+const ClassesMap = ({aClass, setIsEditing, isEditing, deleteHandler}) => {
+
 
     return (
             <div>
@@ -13,8 +13,8 @@ const {aClass} = props
             <p>Location: {aClass.location}</p>
             <p>Registered Attendees: {aClass.numberOfRegisteredAttendees}</p>
             <p>Max Attendees: {aClass.maxClassSize}</p>
-            {/* <button onClick={handleEdit}>Edit</button>
-            <button onClick={deleteHandler}>Delete</button> */}
+            <button onClick={()=>setIsEditing(!isEditing)}>Edit</button>
+            <button onClick={(e)=>deleteHandler(e, aClass.id)}>Delete</button>
           </div>
     )
 }    

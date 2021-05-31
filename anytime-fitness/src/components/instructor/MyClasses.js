@@ -18,7 +18,7 @@ const initialState = [{
 
 const MyClasses = () => {
   const [classes, setClasses] = useState(initialState)
-  const [singleClass, setSingleClass] = useState({})
+  const [isEditing, setIsEditing] = useState(false)
   // to access the classes available upon mount
 
   useEffect(() => {
@@ -33,19 +33,21 @@ const MyClasses = () => {
 
   // to update the class
 
-  const editHandler = (e, id) => {
+  const editHandler = (e, classToEdit) => {
     e.preventDefault()
+    const id = classToEdit.id
     axiosWithAuth()
-      .put(`/api/classes/${id}`, singleClass)
+      .put(`/api/classes/${id}`, classToEdit)
       .then(res=>{
         console.log('MyClasses put RES', res)
         const editClass = classes.filter((aClass) => aClass.id !== Number(id) )
-        editClass.push(singleClass)
+        editClass.push(classToEdit)
         setClasses(editClass)
       })
         .catch(err => {
         console.log('MyClasses put ERR', err)
       })
+      setIsEditing(false)
   }
   // to delete a class
 
@@ -55,7 +57,7 @@ const MyClasses = () => {
     .delete(`/api/classes/${id}`)
       .then(res => { 
         console.log('MyClasses delete RES', res) 
-        const remainingClasses = classes.filter((aClass)=> aClass.id !== Number(res.data))
+        const remainingClasses = classes.filter((aClass)=> aClass.id !== id)
         setClasses(remainingClasses)
     })
       .catch(err => { console.log('MyClasses delete ERR', err) })
@@ -252,14 +254,11 @@ const MyClasses = () => {
         <section className='mc-class-card'>
           <img className='mc-class-img' src='https://media.istockphoto.com/vectors/weights-symbol-icon-black-minimalist-dumbbell-outline-isolated-vector-vector-id1130190327?k=6&m=1130190327&s=170667a&w=0&h=TvK9RZNYmEHPpWMKRHMA6TQVVHtPUMtdhhHZmDcecBQ=' alt='placeholder.img' />
           <div className='mc-mini-section-container'>
+            
             {classes.map((aClass)=> {
               return<div>
-                
-                <ClassesMap aClass={aClass} />
-                <button onClick={(e)=>deleteHandler(e, classes.id)}>Delete</button>
-                <EditForm classes={classes} />
-                <button onClick={(e)=>editHandler(e, classes.id)}>Edit</button>
-                
+                {isEditing ? <EditForm aClass={aClass} editHandler={editHandler} />
+                 : <ClassesMap aClass={aClass} setIsEditing={setIsEditing} isEditing={isEditing} deleteHandler={deleteHandler}/>}
               </div>
         })}
         </div>
