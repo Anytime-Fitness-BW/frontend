@@ -241,12 +241,14 @@ const MyClasses = () => {
               <p className='mc-class-info'>Location: Miami, FL</p>
               <p className='mc-class-info'>Date: June 24, 2021</p>
               <p className='mc-class-info'>Time: 1:30pm to 3:00pm</p>
+              <button className='button-1' onClick={editHandler}>Edit</button>
             </div>
             <div className='mc-mini-section-2'>
               <p className='mc-class-info'>Duration: 4 months</p>
               <p className='mc-class-info'>Level: Expert</p>
               <p className='mc-class-info'>Type: Bootcamp</p>
               <p className='mc-class-info'>Price: $45</p>
+              <button className='button-2' onClick={deleteHandler}>Delete</button>
             </div>
           </div>
         </section>
@@ -267,6 +269,7 @@ const MyClasses = () => {
       </div>
 
       <nav>
+        <h1></h1>
         <div className='client-nav-links'>
           <Link to='/dashboard/instructor'>Back to Dashboard</Link>
         </div>
